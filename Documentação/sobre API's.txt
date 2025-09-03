@@ -1,0 +1,22 @@
+Relatório sobre  APIs de Moda (Pedro)
+
+O foco é ter funções como identificar roupas em fotos, sugerir combinações de peças e cores,
+além de ajudar a achar itens parecidos. Pesquisei algumas opções que poderiam ser usadas 
+e dei preferência para ferramentas grátis e open source.
+Primeira opcao, foi 'MMFashio', que é uma biblioteca feita em PyTorch.
+Ela já vem com várias funções prontas para trabalhar com moda, como reconhecer roupas,
+analisar combinações e até recortar peças dentro de uma imagem. 
+Além dela, também achei um projeto no GitHub chamado 'AI Personal Stylist and Outfit Recommendation',
+que funciona como um assistente virtual de moda. 
+Esse projeto consegue recomendar looks personalizados a partir de fotos e
+usa modelos de visão computacional.
+
+Pesquisei algumas pagas para observar o que iria falta de funcionalidade no projeto,
+algumas como: 
+1- api4.ai (reconhecimento de roupas e acessórios)
+2-Zyla API Hub (categorização de roupas e tendências)
+3-Perfect Corp (provador virtual)
+4-Ximilar (busca visual e classificação)
+5- CloudSight (identificação de objetos em fotos com resultados online)
+Essas ferramentas são bem interessantes, mas a maioria tem limitações ou precisa de plano pago.
+
