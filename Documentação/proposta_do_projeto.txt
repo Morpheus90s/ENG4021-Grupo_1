@@ -1,0 +1,44 @@
+Relatório – Proposta Inicial
+
+1. Objetivo do Projeto
+
+O projeto tem como objetivo criar um site de moda usando o framework Django.
+A ideia é que o usuário possa cadastrar as roupas que tem no seu guarda-roupa e,
+a partir delas, montar combinações de looks. Além disso,
+será possível ver looks de outros usuários e buscar peças de forma simples.
+
+2. O que o site fará
+
+Nosso site funcionará como uma plataforma básica de moda. O usuário poderá:
+
+1)Cadastrar suas roupas (nome, tipo, cor etc.).
+2)Montar looks com as peças que já possui.
+3)Visualizar combinações de outros usuários, servindo de inspiração.
+4)Realizar buscas simples de peças por nome ou categoria.
+
+3. Problema que queremos solucionar
+
+Muitas pessoas têm dificuldade em escolher combinações de roupas ou
+em variar os looks usando o que já têm no guarda-roupa. 
+O site busca resolver esse problema ao oferecer uma forma de organizar 
+digitalmente as peças e sugerir combinações, além de permitir que o usuário
+se inspire nos looks de outros.
+
+4. Funcionalidades Iniciais
+
+1)Cadastro de peças de roupa.
+2)Montagem de looks com peças cadastradas.
+3)Exibição de looks de outros usuários.
+4)Busca de peças por nome ou categoria.
+
+5. Possíveis Funcionalidades Futuras
+
+1)Recomendação de peças que combinem com o look.
+2)Busca de peças por foto enviada pelo usuário.
+
+6. O que o site não vai fazer
+
+1)Não será um e-commerce (sem vendas de roupas).
+2)Não terá sistema de recomendação avançado com IA nesta fase.
+3)Não vai permitir upload ilimitado de fotos para busca de peças logo no início.
+4)Não terá integração com redes sociais nesta primeira versão.
