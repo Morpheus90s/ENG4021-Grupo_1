@@ -1,0 +1,29 @@
+Guia de API no Django(Pedro)
+
+Para a API que iremos fazer em Django percebi que precisaremos construir a aplicação do zero, usando os seguintes elementos:
+
+1. Reestruturar o Projeto
+Não poderemos usar uma API pronta.
+Iremos estruturar em:
+
+Modelos: Teremos um modelo simples para salvar os resultados de cada análise. Ele vai armazenar o histórico de uploads, 
+a própria imagem e os resultados da análise em formato JSON.
+
+Views: Faremos uma view específica para a nossa API. Ela será responsável por receber o upload da imagem e, em seguida, chamar o código que faz a análise.
+
+URLs: As URLs para criar para direcionar o tráfego para a nossa view da API
+
+2. A Parte Essencial: Análise de Imagens com IA
+A lógica de análise é o coração da nossa API. Para isso, utilizaremos bibliotecas de IA gratuitas e de código aberto:
+
+Manipulação de Imagem: A biblioteca Pillow será usada para abrir e fazer ajustes básicos na imagem, como redimensionamento, antes de passá-la para o modelo de IA.
+
+Identificação de Roupas: A parte mais complexa. Faremos isso usando um modelo de detecção de objetos pré-treinado. As melhores opções são modelos do PyTorch ou TensorFlow, pois já vêm com a capacidade de identificar uma grande variedade de objetos, incluindo roupas. 
+O modelo vai retornar o tipo de item (ex: "camisa", "calça jeans") e sua localização na imagem.
+
+3. Ferramentas
+Para o desenvolvimento, teremos que aprender
+
+Django e DRF: A base do nosso projeto.
+Pillow: Para manipular imagens.
+PyTorch ou TensorFlow: Para a análise de imagens com IA.
