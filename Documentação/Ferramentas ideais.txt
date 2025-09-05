@@ -1,0 +1,83 @@
+Closet Digital Inteligente
+
+Escaneamento automático de roupas (foto → IA reconhece cor, categoria, tecido, estação).
+
+Organização por etiqueta inteligente (pode até ter integração com QR Code nas etiquetas físicas).
+
+Estatísticas de uso: cost-per-wear, peças mais usadas, roupas paradas.
+
+
+
+2. Sugestão Baseada no Clima + Ocasião + Humor
+
+Clima hiper detalhado (temperatura, chuva, vento, sensação térmica).
+
+Ocasião (trabalho, festa, encontro, viagem, evento esportivo).
+
+Estado de espírito (quero estar confiante, dia relax, look fashionista).
+
+Planejamento automático de mala para viagens.
+
+
+
+
+ 3. Provador Virtual 3D
+
+Avatar fiel ao corpo do usuário (medidas + foto escaneada).
+
+Visualização realista com roupas do closet digital e também de lojas parceiras.
+
+Teste de acessórios (sapatos, bolsas, joias, óculos, maquiagem, cabelo).
+
+Opção AR (realidade aumentada): ver o look direto no espelho do celular.
+
+
+
+4. Marketplace Integrado
+
+Sugestão de peças complementares às que você já tem.
+
+Filtro de sustentabilidade (mostrar marcas eco-friendly, impacto ambiental).
+
+Possibilidade de vender/doar roupas pouco usadas direto no app.
+
+Parcerias com e-commerces locais e globais.
+
+
+
+
+Social & Comunidade
+
+Compartilhar look do dia para feedback rápido de amigos/seguidores.
+
+Votações (“esse ou aquele look?” estilo Tinder de moda).
+
+Inspiração de influenciadores e pessoas com estilo parecido.
+
+Feed personalizável (parecido com Pinterest, mas interativo).
+
+
+
+Insights & Personalização
+
+IA que aprende seu estilo com o tempo (quanto mais usa, mais certeiro fica).
+
+Relatórios mensais: peças mais usadas, menos usadas, custo-benefício.
+
+Alertas inteligentes: “faz 90 dias que você não usa essa jaqueta, quer vender?”
+
+Estatísticas de impacto sustentável do seu guarda-roupa.
+
+
+
+
+
+ Experiência Premium
+
+Integração com assistentes de voz (tipo “Siri, qual look eu uso hoje?”).
+
+Sincronização multiplataforma (mobile + web + smart mirror futurista).
+
+Consultor de moda ao vivo (estilista parceiro via chat/vídeo dentro do app).
+
+Versão offline mode para usar mesmo sem internet.

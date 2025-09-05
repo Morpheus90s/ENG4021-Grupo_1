@@ -1,0 +1,31 @@
+O que falta em cada aplicativo :
+
+
+Alta
+
+-Prova virtual realista (AR/3D): atualmente foca em avatar e planejamento; ainda não usa AR com sobreposição realista do look sobre o corpo do usuário
+
+-Feed ou rede social interna de looks: compartilhar com outras pessoas inspirações ou ver como ficam looks na vida real, recurso popular em Whering.
+
+-Compatibilidade com clima/ocasião instantânea: apps como aisthetic já oferecem sugestões baseadas no tempo e no dia, recurso que Alta poderia integrar.
+
+
+
+Doppl (Google)
+
+-Disponibilidade ampla e usabilidade: ainda é experimental e limitado, difícil de encontrar e usar, inclusive limitado a iOS/Android nos EUA 
+
+-Sugestões de tamanho adequado: foco está mais no visual/nível de vídeo; falta recomendação precisa de tamanho, como em aplicativos especializados em sizing, tipo LookSize 
+
+
+Fits – Outfit Planner & Closet
+
+-Variedade de marcas/varejo integrado: organiza o closet, mas pode não oferecer integração com muitas marcas nem possibilidade de compra direta.
+
+-Feedback social/comunitário: poucas avaliações ou compartilhamentos das roupas usadas por outros, como em Stitch Fix ou Vybe, que permitem ver usuários usando o item.
+
+Acloset
+
+-Visualização realista/avatares 3D: organiza e sugere, mas ainda sem avatar realista ou prova virtual.
+
+-Prova em tempo real (AR): faltam recursos como sobrepor roupas no corpo do usuário em real time, como Zara ou Amazon AR
