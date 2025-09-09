@@ -1,0 +1,38 @@
+Relatório – Inspiração de Layouts de Sites de Moda
+
+Para o desenvolvimento do nosso site de moda, buscamos referências que oferecessem
+funcionalidades semelhantes às que desejamos implementar, como a possibilidade de montar
+looks a partir de fotos de roupas.
+
+1- Inside
+
+Link: https://www.inside.com.br
+
+Por que escolhemos: O Inside é uma plataforma brasileira que permite aos usuários
+montar looks a partir de suas próprias roupas.
+A funcionalidade de "provador virtual" é um destaque,
+permitindo que os usuários visualizem como as peças ficam quando combinadas,
+facilitando a escolha de looks e aumentando a confiança nas combinações feitas.
+
+Inspiração: A interface intuitiva e a proposta de interação com o usuários
+
+2- Google – Provador Virtual
+
+Link: https://www.google.com/search/about/
+
+Por que escolhemos: O Google oferece uma ferramenta de provador virtual que permite aos usuários
+visualizar como as roupas ficariam em seu corpo a partir de uma foto.
+
+Inspiração: A tecnologia de realidade aumentada utilizada pelo Google
+serve como referência para pensarmos em como implementar uma experiência para usuários.
+
+3- Pic Copilot
+
+Link: https://www.piccopilot.com/br/tools/tryon
+
+Por que escolhemos: O Pic Copilot é uma ferramenta que permite criar imagens de prova virtual realistas,
+utilizando inteligência artificial para sobrepor roupas em modelos virtuais.
+Essa tecnologia pode ser aplicada para visualizar como diferentes peças combinam entre si.
+
+Inspiração: A utilização de inteligência artificial para criar combinações de looks
+e a apresentação visual das peças foram aspectos que podem inspirar o projeto.
