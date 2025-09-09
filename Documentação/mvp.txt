@@ -1,0 +1,30 @@
+Relatório – Objetivos do MVP
+
+1- O que é o MVP
+
+O MVP (Produto Mínimo Viável) é a primeira versão do nosso site. 
+Ele precisa ter só o básico para funcionar e mostrar a ideia principal do projeto.
+
+2- O que precisa ter no site (primeira versão)
+
+Cadastrar roupas: o usuário pode colocar no site as peças do seu guarda-roupa (nome, tipo, cor).
+Montar looks: juntar as peças cadastradas para criar combinações.
+Ver looks de outros usuários: servir de inspiração e dar ideias de combinações.
+Buscar peças: procurar roupas já cadastradas por nome ou categoria.
+
+3- Por que escolhemos isso
+
+Essas funções já mostram a ideia do projeto: ajudar as pessoas a organizar as roupas e
+pensar em novas combinações. É o suficiente para testar se o site resolve o problema.
+
+4- O que não vai ter no começo
+
+Não vai vender roupas (não é e-commerce).
+Não vai ter recomendações automáticas com inteligência artificial.
+Não vai ter integração com redes sociais.
+Não vai ter busca por foto.
+
+5- Conclusão
+
+O MVP será simples, mas já vai dar para usar, testar e pegar feedback.
+A partir disso, podemos melhorar e colocar mais coisas no futuro.
