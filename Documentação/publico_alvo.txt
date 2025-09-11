@@ -1,0 +1,32 @@
+Relatório – Definição do Público-Alvo
+
+1- Público-Alvo
+
+O site de moda vai ser para pessoas que querem organizar suas roupas
+e montar looks de um jeito prático e criativo.
+
+Algumas características principais:
+
+Idade: 18 a 35 anos
+Interesses: moda, estilo pessoal e organização do guarda-roupa
+Hábitos digitais: usam aplicativos e sites de moda, gostam de praticidade e navegação fácil
+
+2- O que o público precisa
+
+Conseguir montar combinações de roupas com o que já tem
+Ter inspiração vendo looks de outros usuários
+Navegar em um site simples e intuitivo
+Buscar peças de forma fácil usando filtros ou categorias
+
+3- Objetivo da tarefa
+
+Essa tarefa ajuda a entender quem vai usar o site e como ele precisa ser organizado,
+para que o layout, a navegação e as funcionalidades façam sentido para o público.
+
+Fontes: 
+
+https://www.maisconhecer.com/humanidade/13804/Pesquisa-examina-motivacao-de-jovens-de-18-a-35-anos-para-trocar-roupas-em-larga-escala-?utm_source=chatgpt.com
+
+https://cndl.org.br/varejosa/jovens-de-classe-media-investem-mais-em-produtos-de-vestuario-higiene-e-beleza/?utm_source=chatgpt.com
+
+https://opopular.com.br/magazine/politica-e-tiktok-impulsionam-o-interesse-de-jovens-brasileiros-por-moda-1.2547004
