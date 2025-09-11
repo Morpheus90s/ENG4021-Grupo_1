@@ -1,0 +1,34 @@
+
+Fluxograma do Usuário
+
+Início → Página Inicial
+⬇️
+
+Login / Cadastro
+
+Se já tem conta → faz login
+Se não tem conta → cria conta
+
+⬇️
+
+Menu Principal
+
+Opção 1: Cadastrar peça de roupa
+Opção 2: Montar look
+Opção 3: Ver looks de outros usuários
+Opção 4: Buscar peça no guarda-roupa
+
+⬇️
+
+Caminhos do Usuário
+
+Se escolher Cadastrar peça → preencher dados (nome, tipo, cor) → salvar no guarda-roupa.
+Se escolher Montar look → selecionar roupas cadastradas → criar combinação → salvar look.
+Se escolher Ver looks de outros usuários → abrir galeria → visualizar inspirações.
+Se escolher Buscar peça → digitar nome/categoria → sistema retorna peças correspondentes.
+
+⬇️
+
+Usuário satisfeito → Logout / saio do site
+
+
