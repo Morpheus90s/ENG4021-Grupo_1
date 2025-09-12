@@ -1,9 +1,80 @@
+1. Pedro, 15
+Dificuldade: Combinar cores sem parecer infantil.
+App usado: Às vezes usa o Combyne, mas acaba parando de usá-lo porque acha trabalhoso cadastrar as roupas no app.
+O que ele gostaria: Um app que facilite montar looks com as peças que ele já tem em casa e também indique peças faltantes que sejam baratas e fáceis de encontrar.
+
+Comentário adicional: Pedro parece estar buscando praticidade, já que a parte de cadastrar as roupas não é algo que ele gosta de fazer. A solução ideal seria algo simples e direto, com sugestões acessíveis.
+
+2. Marina, 18
+Dificuldade: Lidar com o clima imprevisível e a necessidade de escolher roupas adequadas para eventos escolares.
+App usado: Usa o Pinterest, mas sente falta de uma ferramenta que ajude a transformar as referências que encontra na plataforma em looks reais com o que já tem no armário.
+O que ela gostaria: Um app que combine agenda pessoal com a previsão do tempo, e que gere de 2 a 3 opções de looks diárias baseadas no clima e nos compromissos do dia.
+
+Comentário adicional: Marina se preocupa com praticidade e organização. Ela quer uma solução que, além de sugerir looks, seja funcional no dia a dia, levando em consideração seus compromissos e o clima.
+
+3. Caio, 22
+Dificuldade: Encontrar a combinação certa de roupas para o estilo smart casual de escritório, para não ficar nem muito formal nem muito casual.
+App usado: Não usa nenhum app de moda, pois acha complicado e não confia nas recomendações.
+O que ele gostaria: Um guia simples que ensine os diferentes dress codes e sugira "uniformes" para a semana, algo bem prático que possa facilitar as escolhas diárias.
+
+Comentário adicional: Caio parece procurar algo mais funcional, que seja educativo e ofereça um tipo de "manual" de vestimenta, especialmente para o ambiente de trabalho.
+
+4. Luísa, 25
+Dificuldade: Criar looks para a noite sem repetir as mesmas fotos nas redes sociais.
+App usado: Usa o Acloset, mas sente falta de um recurso que faça automaticamente a combinação das peças e que tenha integração com o Instagram para mostrar os looks.
+O que ela gostaria: Um app que permita montar looks com suas próprias roupas, salvar esses looks para ocasiões futuras e, talvez, permitir a organização de fotos por evento ou tipo de look.
+
+Comentário adicional: Luísa busca mais criatividade e facilidade para evitar a repetição de looks, especialmente quando se trata de redes sociais. Ela quer uma experiência mais interativa e integrada.
+
+5. Rafael, 28
+Dificuldade: Montar malas para viagens com climas diferentes, mantendo a mala enxuta e prática.
+App usado: Não usa nenhum app de moda, pois sente preguiça de procurar por ele.
+O que ele gostaria: Um recurso que ajude a montar uma cápsula de viagem e que faça um checklist da mala com um clique, de modo a garantir que tudo o que está levando seja adequado para a viagem sem exageros.
+
+Comentário adicional: Rafael quer algo que facilite sua vida de maneira prática e rápida, especialmente para evitar o esforço de montar malas complicadas e pesadas.
+
+6. Camila, 31
+Dificuldade: Organização e combinação de peças de roupa, especialmente pela questão das medidas.
+App usado: Usa Zara e Pinterest, mas sente que as tabelas de medidas não são confiáveis ou fáceis de usar.
+O que ela gostaria: Um app que ofereça tabelas de medidas reais, adaptadas por marca, e que mostre fotos de roupas em corpos parecidos com o dela para facilitar a escolha de peças que realmente servem.
+
+Comentário adicional: Camila se frustra com a falta de precisão nas tabelas de medidas e gostaria de uma solução mais personalizada, que realmente ajude a visualizar como as peças ficariam no corpo dela.
+
+7. Bruno, 35
+Dificuldade: Combinar roupas no calor sem parecer desleixado ou mal arrumado.
+App usado: Não usa nenhum app de moda, pois vê como mais uma tarefa diária que acaba se tornando tediosa.
+O que ele gostaria: Um app que ofereça 3 sugestões rápidas de looks por dia, divididos em categorias como trabalho, casual e noite, para facilitar suas escolhas sem precisar pensar muito sobre isso.
+
+Comentário adicional: Bruno parece buscar algo bem simples e direto, algo que o ajude a evitar o "esforço" de escolher roupas e, ao mesmo tempo, o ajude a se manter estiloso no calor.
+
+8. Ana Paula, 40
+Dificuldade: Não soube responder diretamente, mas está buscando uma solução para filtrar melhor suas opções de roupas.
+App usado: Usa Pinterest, mas sente que falta a opção de filtrar as roupas por tipo de tecido e temperatura.
+O que ela gostaria: Um app que ofereça recomendações de looks baseados no clima e, ao mesmo tempo, forneça uma lista de compras objetiva, indicando peças essenciais que poderiam complementar o guarda-roupa.
+
+Comentário adicional: Ana Paula está procurando algo que combine funcionalidade com praticidade, tanto para escolher roupas no clima certo quanto para atualizar seu guarda-roupa com peças mais essenciais.
+
+9. Guilherme, 42
+Dificuldade: Combinar cores com segurança, sem errar nas escolhas.
+App usado: Não usa nenhum app de moda porque acha tudo confuso e cheio de propagandas.
+O que ele gostaria: Um assistente de cores que ofereça paletas seguras e variações para combinar as roupas de forma prática, sem sobrecarga de informações ou publicidade.
+
+Comentário adicional: Guilherme busca simplicidade e funcionalidade, com um foco específico em garantir que as combinações de cores sejam harmônicas e seguras.
+
+10. Juliana, 45
+Dificuldade: Planejar a semana de looks que funcionem para reuniões e outros compromissos.
+App usado: Usa o Stylebook, mas acha que falta integração com o calendário pessoal.
+O que ela gostaria: Um planner que combine com a agenda de compromissos da semana, gerando looks automáticos por dia, considerando o dress code para cada situação (trabalho, casual, etc.).
+
+Comentário adicional: Juliana parece querer uma solução totalmente integrada, que ajude a planejar seus looks de acordo com sua agenda de compromissos de maneira automática, sem ter que fazer muitas escolhas diárias
+
+
 Perguntas
 O que você mais tem dificuldade na hora de escolher roupa?
 Você usa algum aplicativo de escolher roupa/ajudar a se vestir? Se sim, qual? E se não, por que não usa?
 Num aplicativo de se vestir, o que você acha que é essencial?
 
-
+Resumo ideias centrais entrevista 
 1. Pedro, 15
 Combinar cores sem parecer infantil.
 Às vezes Combyne; não mantém por dar trabalho cadastrar.
