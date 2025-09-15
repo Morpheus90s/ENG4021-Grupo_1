@@ -1,0 +1,34 @@
+Relatório – Pesquisa de Padrões de Navegação e Usabilidade
+
+Nessa tarefa, pesquisei como melhorar a navegação do nosso site para que os usuários encontrem as informações com facilidade.
+O objetivo foi entender boas práticas de navegação, como menus, botões, fluxo de login e filtros de catálogo,
+e aplicar isso no nosso projeto.
+
+Menus de Navegação
+
+Descobri que menus simples e claros ajudam muito na navegação.
+Mega menus ou menus suspensos podem funcionar bem quando há várias categorias,
+mas é importante que tudo fique visível e fácil de encontrar.
+Um artigo que explica isso é da Hotjar: https://www.hotjar.com/pt-BR/web-design/dicas/
+
+Botões e Chamadas para Ação (CTAs)
+
+Pesquisei sobre os botões e chamadas para ação (CTAs).
+É importante que os botões estejam em lugares visíveis e que o texto seja direto,
+tipo “Cadastrar”, “Salvar Look” ou “Adicionar ao Guarda-Roupa”.
+Um artigo que explica isso é da Hotjar: https://www.hotjar.com/pt-BR/web-design/dicas/
+
+Fluxo de Login
+
+O fluxo de login também foi estudado.
+Sites com login social, como Google ou Facebook, facilitam muito a vida do usuário,
+além de incluir “Mostrar senha” e recuperação de senha para evitar erros.
+Videos que falam sobre testes de usabilidade achei aqui: https://www.youtube.com/watch?v=YcH2kxqK3nc 
+e https://www.youtube.com/watch?v=0HOnLDt2p2Q
+
+Filtros de Catálogo
+
+Por fim, analisei os filtros de catálogo.
+Eles ajudam o usuário a achar peças específicas de forma rápida,
+como filtrar por cor, categoria ou tamanho. É importante que o filtro seja fácil de usar e apareça em destaque.
+Alguns videos que mostram boas práticas é esse: https://www.youtube.com/watch?v=jrqd_zNMhFk e https://www.youtube.com/watch?v=28CR6y8k_7g
