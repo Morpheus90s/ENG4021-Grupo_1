@@ -1,1 +1,17 @@
+Baseando-se nas entrevistas realizadas, objetivos/ metas do aplicativo, e outros fatores estudados ate agora pelo grupo, montamos uma persona para nosso aplicativo 
 
+ persona é um personagem semificcional criado a partir de pesquisas (entrevistas, questionários, observações) que representa o cliente/usuário ideal de um produto ou serviço.
+
+Nome: -
+Idade: 16-40 anos
+Ocupação: -
+Cidade: Alguma com variacao de temperatura e clima ( Sp,Rj,cidades europeias) 
+
+
+- sempre foi apaixonada por moda, mas no dia a dia acaba se enrolando na hora de escolher o que vestir. Entre faculdade, estágio,emprego e compromissos sociais, ela sente que gasta muito tempo tentando combinar peças, principalmente quando o clima está instável. O que ela mais odeia é perder a manhã inteira na frente do armário e ainda sair insegura com a escolha.
+Ela já tentou apps como Pinterest e Acloset, mas sempre esbarrou nos mesmos problemas: cadastrar roupa por roupa é chato demais, e os looks prontos que encontra parecem distantes da realidade do guarda-roupa dela. Marina não quer inspiração vaga,ela quer sugestões com as roupas que já tem.
+O que faria diferença pra ela seria um app prático, direto:
+Que sugira 2 a 3 looks por dia, levando em conta clima e agenda.
+Que ajude a combinar cores e estilos sem complicação.
+Que funcione também como um planner semanal, integrando com o calendário dela.
+Que indique peças-chave faltantes (baratas e fáceis de achar), ajudando a atualizar o armário sem gastar além da conta.
