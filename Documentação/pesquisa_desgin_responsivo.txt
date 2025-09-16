@@ -1,0 +1,23 @@
+Relatório – Pesquisa sobre Layout Responsivo
+
+Fui procurar como podemos criar um site que funcione em diferentes tipos de tela (pc, celulares, tablets)
+sem precisar desenvolver um aplicativo específico para celular, o que deixaria o projeto bem mais difícil.
+Descobri que existe uma forma de deixar o mesmo site acessível em qualquer dispositivo, que é o design responsivo.
+Ele ajuda a ajustar os elementos da página conforme o tamanho da tela, sem precisar criar várias versões separadas do site.
+
+Para entender melhor, assisti alguns vídeos no YouTube que explicam o conceito:
+
+Curso de CSS Responsivo – https://www.youtube.com/watch?v=3rrX9w0HhZc e https://www.youtube.com/watch?v=cf_u0D2_khg
+
+Como criar site responsivo com HTML e CSS – https://www.youtube.com/watch?v=c7UoYycwTsQ
+
+Também pesquisei alguns sites que já aplicam responsividade e servem de inspiração:
+
+Magazine Luiza: https://www.magazineluiza.com.br
+
+Apple Brasil: https://www.apple.com/br/
+
+GetBootstrap (exemplos de responsividade): https://getbootstrap.com/docs/5.0/examples/
+
+Com isso percebi que para criar um site responsivo usamos principalmente o CSS,
+com técnicas como media queries para mudar o estilo de acordo com o tamanho da tela e layouts fluidos que se adaptam automaticamente.
