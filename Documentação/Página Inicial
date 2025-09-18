@@ -1,0 +1,88 @@
+Página inicial Findress (HTML)
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Findress - Moda com Tecnologia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .title-font { font-family: 'Montserrat', sans-serif; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center px-8 py-4 shadow-sm">
+    <div class="flex items-center space-x-2">
+      <img src="logo.png" alt="Findress Logo" class="w-10 h-10">
+      <h1 class="title-font text-2xl font-bold text-gray-900">findress</h1>
+    </div>
+    <nav class="space-x-6">
+      <a href="#" class="hover:text-[#6C5CE7]">Início</a>
+      <a href="#sobre" class="hover:text-[#6C5CE7]">Sobre</a>
+      <a href="#looks" class="hover:text-[#6C5CE7]">Monte seu Look</a>
+      <a href="#contato" class="hover:text-[#6C5CE7]">Contato</a>
+    </nav>
+    <button class="bg-[#3A86FF] text-white px-4 py-2 rounded-lg hover:bg-[#6C5CE7] transition">Entrar</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="flex flex-col md:flex-row items-center justify-between px-12 py-20">
+    <div class="md:w-1/2 space-y-6">
+      <h2 class="title-font text-5xl font-bold text-gray-900 leading-tight">
+        Moda Inteligente, <br> Looks na Palma da Sua Mão
+      </h2>
+      <p class="text-lg text-gray-600">
+        Descubra combinações únicas e experimente roupas de forma virtual com o Findress, 
+        sua plataforma de moda com tecnologia.
+      </p>
+      <div class="space-x-4">
+        <button class="bg-[#6C5CE7] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#3A86FF] transition">Começar Agora</button>
+        <button class="border-2 border-[#6C5CE7] text-[#6C5CE7] px-6 py-3 rounded-xl font-semibold hover:bg-[#6C5CE7] hover:text-white transition">Saiba Mais</button>
+      </div>
+    </div>
+    <div class="md:w-1/2 mt-10 md:mt-0">
+      <img src="hero-image.png" alt="Provador Virtual" class="rounded-2xl shadow-lg">
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="looks" class="px-12 py-16 bg-gray-50">
+    <h3 class="title-font text-3xl font-bold text-center mb-12 text-gray-900">Como Funciona?</h3>
+    <div class="grid md:grid-cols-3 gap-10 text-center">
+      <div class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+        <img src="upload.png" alt="Upload" class="w-16 mx-auto mb-4">
+        <h4 class="font-semibold text-xl mb-2">1. Faça Upload</h4>
+        <p class="text-gray-600">Envie fotos das suas roupas e deixe a IA organizar seu guarda-roupa.</p>
+      </div>
+      <div class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+        <img src="combine.png" alt="Combine" class="w-16 mx-auto mb-4">
+        <h4 class="font-semibold text-xl mb-2">2. Monte Looks</h4>
+        <p class="text-gray-600">Crie combinações inteligentes de peças e visualize em tempo real.</p>
+      </div>
+      <div class="p-6 bg-white rounded-2xl shadow hover:shadow-lg transition">
+        <img src="tryon.png" alt="Try On" class="w-16 mx-auto mb-4">
+        <h4 class="font-semibold text-xl mb-2">3. Experimente Virtualmente</h4>
+        <p class="text-gray-600">Veja como ficaria no seu corpo com nosso provador virtual.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contato" class="bg-gray-900 text-white px-12 py-8 mt-12">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <p>&copy; 2025 Findress. Todos os direitos reservados.</p>
+      <div class="space-x-4 mt-4 md:mt-0">
+        <a href="#" class="hover:text-[#F8AFA6]">Instagram</a>
+        <a href="#" class="hover:text-[#F8AFA6]">LinkedIn</a>
+        <a href="#" class="hover:text-[#F8AFA6]">Contato</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
