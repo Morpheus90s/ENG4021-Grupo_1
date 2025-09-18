@@ -1,9 +1,22 @@
-Relatorio sobre Framework de CSS
+Relatório frameworks com CSS
 
-Pesquisei sobre os frameworks de CSS que auxiliam na responsabilidade do website ... 
+Pesquisei sobre frameworks CSS para ver qual se encaixa melhor no nosso projeto de moda.
+O objetivo era encontrar uma ferramenta que ajudasse a criar um site responsivo,
+bonito e fácil de usar em diferentes dispositivos.
 
-Busquei no site: https://www.browserstack.com/guide/top-css-frameworks 
+Os principais que encontrei foram Bootstrap, Tailwind CSS e Materialize CSS.
+O Bootstrap é bem popular e tem muita documentação,
+mas costuma deixar os sites com cara “padrão”.
+O Tailwind CSS é mais flexível, pois usa classes utilitárias que permitem personalizar
+bastante o design. Já o Materialize CSS segue o estilo do Google tem componentes prontos,
+mas não é tão atualizado e a comunidade é menor.
 
-e Cheguei na conclusao que usarie os framework: https://tailwindcss.com/docs/hover-focus-and-other-states e https://getbootstrap.com/.
+Com isso, concluí que o Tailwind CSS é a melhor escolha,
+pois equilibra modernidade e flexibilidade
+O Bootstrap poderia ser usado se quiséssemos algo rápido,
+mas não teria o mesmo destaque visual
 
-assiti videos que ensino a implementar no projeto: https://www.youtube.com/watch?v=tMgOTc2xRx0, https://www.youtube.com/watch?v=pfaSUYaSgRo e https://www.youtube.com/watch?v=maoHDmRu3z4&t=95s, https://www.youtube.com/watch?v=zEi62PpFezU, https://www.youtube.com/watch?v=Gp1Mb3_fxbg&t=47s
+Assisti alguns videos: https://www.youtube.com/watch?v=SMxm7sxG1Cw , https://www.youtube.com/watch?v=SMxm7sxG1Cw
+e https://www.youtube.com/watch?v=ft30zcMlFao , https://www.youtube.com/watch?v=ft30zcMlFao 
+
+https://getbootstrap.com/docs/, https://tailwindcss.com/docs e https://materializecss.com/
