@@ -1,0 +1,60 @@
+Nesta etapa do projeto, estou focando na construção do fluxo inicial de uso do aplicativo, contemplando tanto o comportamento de um novo usuário quanto o de um usuário recorrente. Essa tarefa tem como objetivo estruturar a jornada do usuário desde o momento em que abre o aplicativo até a etapa em que ele começa a interagir com suas roupas digitalizadas e recebe sugestões de looks.
+
+Fluxo proposto
+
+--Usuário novo: Ao abrir o aplicativo pela primeira vez, o usuário será direcionado para uma tela de cadastro, onde poderá criar sua conta inserindo dados como nome, e-mail e senha. Após o cadastro, será apresentado a um onboarding (tutorial breve) explicando as funcionalidades principais do app, especialmente o escaneamento de roupas e o uso das recomendações.
+
+
+
+--Usuário existente: Caso já tenha uma conta, o usuário será automaticamente redirecionado para a aba central do aplicativo, onde poderá acessar diretamente as funcionalidades principais, como escanear roupas ou receber sugestões.
+
+
+
+--Escaneamento do guarda-roupa: O próximo passo natural após o acesso é o escaneamento do guarda-roupa. O usuário poderá fotografar as peças ou inseri-las manualmente com algumas informações (tipo, cor, estilo, estação, etc.). Essas roupas serão salvas em um guarda-roupa digital organizado por categorias.
+
+
+
+--Sugestões automáticas (look do momento): Com base nas peças cadastradas, o aplicativo será capaz de gerar sugestões de combinações automaticamente, considerando o clima e o horário atual (como se o usuário tivesse que se vestir naquele exato momento). O objetivo é que o app funcione como um assistente pessoal de estilo, trazendo sugestões rápidas e práticas.
+
+
+
+--Planejamento de looks futuros: Além das sugestões em tempo real, haverá uma funcionalidade de planejamento, onde o usuário poderá indicar um evento futuro ou uma ocasião específica, configurando: data e horário, local e clima esperado (ou deixar o app prever). A partir dessas informações, o aplicativo irá gerar sugestões de looks adequadas para o contexto definido, e o usuário poderá salvar a combinação para consulta futura.
+
+Obs : ideia princpal eh o app estar conectado com algum aplicativo de clima/tempo
+
+
+
+--Melhorias e recursos pensados para a experiência do usuário 
+
+Adcionais :: 
+
+
+
+
+--Um tutorial rápido e interativo será apresentado no primeiro acesso, explicando como escanear as roupas, organizar o guarda-roupa digital e receber sugestões. Isso reduz a curva de aprendizado e aumenta a retenção de novos usuários.
+
+
+--Feedback visual com animações
+Para tornar o uso mais agradável, pequenas animações serão aplicadas ao escanear e adicionar uma peça ao guarda-roupa, reforçando visualmente que a ação foi concluída com sucesso.
+
+
+
+--Interação com as sugestões
+As sugestões de look não serão engessadas. O usuário poderá clicar em uma peça sugerida para ver variações similares ou montar novas combinações a partir daquela seleção.
+
+
+
+--Personalização do estilo
+O aplicativo contará com um painel de preferências, onde o usuário poderá configurar aspectos como: tipos de roupa que costuma usar, estilos preferidos (casual, formal, esportivo etc.), peças que não gosta ou prefere evitar. Com essas informações, as recomendações se tornam mais relevantes para o perfil individual de cada pessoa.
+
+
+
+--Notificações inteligentes
+O app poderá enviar notificações personalizadas, como lembretes de looks planejados para um evento ou alertas sobre mudanças no clima, sugerindo ajustes no visual. Exemplo: “A previsão indica chuva hoje à tarde. Que tal incluir uma jaqueta no seu look?”
+
+
+--Integração com o calendário
+Para melhorar a experiência no planejamento, haverá a opção de integrar o app com o calendário do usuário, permitindo vincular eventos reais aos looks salvos, automatizando ainda mais o processo.
+
+Modo claro/escuro
+Para melhorar o conforto visual, especialmente em ambientes noturnos, o aplicativo contará com modo claro e escuro, ajustável manualmente ou automaticamente conforme o sistema do dispositivo.
