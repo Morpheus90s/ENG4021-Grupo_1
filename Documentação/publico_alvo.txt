@@ -1,32 +1,22 @@
-Relatório – Definição do Público-Alvo
+Relatório frameworks com CSS
 
-1- Público-Alvo
+Pesquisei sobre frameworks CSS para ver qual se encaixa melhor no nosso projeto de moda.
+O objetivo era encontrar uma ferramenta que ajudasse a criar um site responsivo,
+bonito e fácil de usar em diferentes dispositivos.
 
-O site de moda vai ser para pessoas que querem organizar suas roupas
-e montar looks de um jeito prático e criativo.
+Os principais que encontrei foram Bootstrap, Tailwind CSS e Materialize CSS.
+O Bootstrap é bem popular e tem muita documentação,
+mas costuma deixar os sites com cara “padrão”.
+O Tailwind CSS é mais flexível, pois usa classes utilitárias que permitem personalizar
+bastante o design. Já o Materialize CSS segue o estilo do Google tem componentes prontos,
+mas não é tão atualizado e a comunidade é menor.
 
-Algumas características principais:
+Com isso, concluí que o Tailwind CSS é a melhor escolha,
+pois equilibra modernidade e flexibilidade
+O Bootstrap poderia ser usado se quiséssemos algo rápido,
+mas não teria o mesmo destaque visual
 
-Idade: 18 a 35 anos
-Interesses: moda, estilo pessoal e organização do guarda-roupa
-Hábitos digitais: usam aplicativos e sites de moda, gostam de praticidade e navegação fácil
+Assisti alguns videos: https://www.youtube.com/watch?v=SMxm7sxG1Cw , https://www.youtube.com/watch?v=SMxm7sxG1Cw
+e https://www.youtube.com/watch?v=ft30zcMlFao , https://www.youtube.com/watch?v=ft30zcMlFao 
 
-2- O que o público precisa
-
-Conseguir montar combinações de roupas com o que já tem
-Ter inspiração vendo looks de outros usuários
-Navegar em um site simples e intuitivo
-Buscar peças de forma fácil usando filtros ou categorias
-
-3- Objetivo da tarefa
-
-Essa tarefa ajuda a entender quem vai usar o site e como ele precisa ser organizado,
-para que o layout, a navegação e as funcionalidades façam sentido para o público.
-
-Fontes: 
-
-https://www.maisconhecer.com/humanidade/13804/Pesquisa-examina-motivacao-de-jovens-de-18-a-35-anos-para-trocar-roupas-em-larga-escala-?utm_source=chatgpt.com
-
-https://cndl.org.br/varejosa/jovens-de-classe-media-investem-mais-em-produtos-de-vestuario-higiene-e-beleza/?utm_source=chatgpt.com
-
-https://opopular.com.br/magazine/politica-e-tiktok-impulsionam-o-interesse-de-jovens-brasileiros-por-moda-1.2547004
+https://getbootstrap.com/docs/, https://tailwindcss.com/docs e https://materializecss.com/
