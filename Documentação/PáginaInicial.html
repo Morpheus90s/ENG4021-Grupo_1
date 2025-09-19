@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Findress - Moda com Tecnologia</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { 
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .title-font { 
+      font-family: 'Montserrat', sans-serif;
+    }
+    .gradient-bg {
+      background: linear-gradient(135deg, #6C5CE7 0%, #3A86FF 100%);
+    }
+    .hero-pattern {
+      background-color: #f8fafc;
+      opacity: 0.8;
+      background-image: radial-gradient(#6C5CE7 0.5px, transparent 0.5px), radial-gradient(#6C5CE7 0.5px, #f8fafc 0.5px);
+      background-size: 20px 20px;
+      background-position: 0 0, 10px 10px;
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 flex justify-between items-center px-12 py-4 bg-white shadow-md">
+    <div class="flex items-center space-x-3">
+      <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center">
+        <span class="title-font text-white text-xl">F</span>
+      </div>
+      <h1 class="title-font text-2xl font-bold text-gray-900">findress</h1>
+    </div>
+    <nav class="hidden md:flex space-x-8">
+      <a href="#" class="font-medium hover:text-[#6C5CE7] transition-colors">Início</a>
+      <a href="#sobre" class="font-medium hover:text-[#6C5CE7] transition-colors">Sobre</a>
+      <a href="#funciona" class="font-medium hover:text-[#6C5CE7] transition-colors">Como Funciona</a>
+      <a href="#contato" class="font-medium hover:text-[#6C5CE7] transition-colors">Contato</a>
+    </nav>
+    <div class="flex items-center space-x-4">
+      <button class="text-gray-600 hover:text-[#6C5CE7] transition-colors">Entrar</button>
+      <button class="bg-[#6C5CE7] text-white px-5 py-2.5 rounded-lg hover:bg-[#3A86FF] transition-all font-medium">Cadastre-se</button>
+      <button class="md:hidden text-gray-600">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col md:flex-row items-center justify-between px-12 py-12 md:py-20 hero-pattern">
+    <div class="md:w-1/2 space-y-8">
+      <h2 class="title-font text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
+        Moda Inteligente, <br> <span class="text-[#6C5CE7]">Looks na Palma</span> da Sua Mão
+      </h2>
+      <p class="text-xl text-gray-600 max-w-lg">
+        Descubra combinações únicas e experimente roupas de forma virtual com o Findress, 
+        sua plataforma de moda com tecnologia.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-5">
+        <button class="gradient-bg text-white px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition shadow-lg flex items-center justify-center gap-2">
+          <i class="fas fa-play-circle"></i> Começar Agora
+        </button>
+        <button class="border-2 border-[#6C5CE7] text-[#6C5CE7] px-8 py-4 rounded-xl font-semibold hover:bg-[#6C5CE7] hover:text-white transition flex items-center justify-center gap-2">
+          <i class="fas fa-info-circle"></i> Saiba Mais
+        </button>
+      </div>
+      <div class="flex items-center pt-8 gap-6">
+        <div class="flex -space-x-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 border-2 border-white"></div>
+          <div class="w-10 h-10 rounded-full bg-gradient-to-r from-yellow-400 to-red-500 border-2 border-white"></div>
+          <div class="w-10 h-10 rounded-full bg-gradient-to-r from-green-400 to-blue-500 border-2 border-white"></div>
+        </div>
+        <p class="text-gray-600"><span class="font-semibold text-[#6C5CE7]">+5.000</span> usuários já experimentaram</p>
+      </div>
+    </div>
+    <div class="md:w-1/2 mt-16 md:mt-0 flex justify-center">
+      <div class="relative">
+        <div class="absolute -inset-4 bg-gradient-to-r from-[#6C5CE7] to-[#3A86FF] rounded-2xl blur-lg opacity-20"></div>
+        <div class="relative bg-white rounded-2xl shadow-2xl overflow-hidden border-8 border-white max-w-md">
+          <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Provador Virtual" class="w-full h-auto">
+          <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 text-white">
+            <h3 class="font-semibold text-xl">Experimente antes de comprar</h3>
+            <p>Visualize looks completos em realidade aumentada</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="funciona" class="px-12 py-20 bg-white">
+    <div class="max-w-4xl mx-auto text-center mb-16">
+      <h3 class="title-font text-4xl font-bold text-gray-900 mb-4">Como Funciona?</h3>
+      <p class="text-xl text-gray-600">Três passos simples para revolucionar sua experiência com moda</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="feature-card p-8 bg-gray-50 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div class="w-20 h-20 gradient-bg rounded-2xl flex items-center justify-center mb-6 mx-auto">
+          <i class="fas fa-cloud-upload-alt text-white text-3xl"></i>
+        </div>
+        <h4 class="font-semibold text-2xl mb-4 text-center">1. Faça Upload</h4>
+        <p class="text-gray-600 text-center">Envie fotos das suas roupas e deixe a IA organizar seu guarda-roupa digital.</p>
+      </div>
+      <div class="feature-card p-8 bg-gray-50 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div class="w-20 h-20 gradient-bg rounded-2xl flex items-center justify-center mb-6 mx-auto">
+          <i class="fas fa-tshirt text-white text-3xl"></i>
+        </div>
+        <h4 class="font-semibold text-2xl mb-4 text-center">2. Monte Looks</h4>
+        <p class="text-gray-600 text-center">Crie combinações inteligentes de peças e visualize em tempo real.</p>
+      </div>
+      <div class="feature-card p-8 bg-gray-50 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100">
+        <div class="w-20 h-20 gradient-bg rounded-2xl flex items-center justify-center mb-6 mx-auto">
+          <i class="fas fa-vr-cardboard text-white text-3xl"></i>
+        </div>
+        <h4 class="font-semibold text-2xl mb-4 text-center">3. Experimente Virtualmente</h4>
+        <p class="text-gray-600 text-center">Veja como ficaria no seu corpo com nosso provador virtual em RA.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="px-12 py-20 gradient-bg text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="title-font text-4xl font-bold mb-6">Pronto para transformar seu guarda-roupa?</h3>
+      <p class="text-xl mb-10 max-w-2xl mx-auto">Junte-se a milhares de usuários que já descobriram uma nova forma de experimentar moda</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button class="bg-white text-[#6C5CE7] px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition shadow-lg">
+          Comece Gratuitamente
+        </button>
+        <button class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-[#6C5CE7] transition">
+          Ver Demonstração
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contato" class="bg-gray-900 text-white px-12 py-12">
+    <div class="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+      <div>
+        <div class="flex items-center space-x-3 mb-6">
+          <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+            <span class="title-font text-white text-xl">F</span>
+          </div>
+          <h1 class="title-font text-2xl font-bold">findress</h1>
+        </div>
+        <p class="text-gray-400">Sua plataforma de moda inteligente com tecnologia de ponta para criar e experimentar looks.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold text-lg mb-6">Empresa</h4>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-400 hover:text-white transition">Sobre Nós</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition">Carreiras</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-lg mb-6">Recursos</h4>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-400 hover:text-white transition">Guia de Estilo</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition">Tutoriais</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition">API</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold text-lg mb-6">Contato</h4>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram mr-2"></i> Instagram</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-linkedin mr-2"></i> LinkedIn</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition"><i class="fas fa-envelope mr-2"></i> Contato</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+      <p>&copy; 2025 Findress. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
