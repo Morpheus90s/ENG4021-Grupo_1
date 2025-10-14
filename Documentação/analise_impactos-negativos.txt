@@ -1,0 +1,13 @@
+Análise dos Possíveis Problemas Sociais do Projeto
+
+O site de moda, apesar de ser uma ferramenta útil, pode gerar alguns problemas sociais.
+Primeiro, há o risco de exclusão social, pessoas que não têm acesso fácil à internet ou a um celular podem ficar
+de fora dos benefícios do aplicativo. 
+Além disso, se cadastrar todas as roupas for muito difícil ou demorado, o usuário pode desistir do projeto,
+mesmo querendo usá-lo.
+Segundo, existe o problema da pressão e comparação. Quando o usuário vê os looks prontos de outras pessoas na plataforma,
+pode se sentir mal ou achar que suas próprias roupas não são boas o suficiente, a inspiração que deveria ser positiva
+pode virar uma fonte de frustração
+Por último, há o perigo de dependência da tecnologia. Se a pessoa usar o app para decidir o que vestir todos os dias,
+ela pode acabar perdendo a capacidade de ser criativa e de escolher suas roupas rapidamente por conta própria,
+ficando dependente da ferramenta.
