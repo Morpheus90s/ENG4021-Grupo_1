@@ -1,0 +1,23 @@
+Análise dos Impactos Sociais Positivos do Projeto
+
+O projeto visa criar um site de moda que ajude os usuários a organizar digitalmente
+suas roupas e montar combinações de looks. 
+Essa proposta gera impactos sociais positivos diretos,
+começando pela melhoria da qualidade de vida diária. O site busca solucionar
+o problema de pessoas que perdem tempo ou têm dificuldade
+em escolher combinações de roupas.
+Ao sugerir combinações com as peças que o usuário já tem ,
+o aplicativo permite que a usuária gerencie melhor seu tempo e
+se sinta mais segura e confiante com suas escolhas, combatendo a insegurança e o estresse na frente do armário.
+
+Além disso, o projeto tem um impacto positivo no estímulo à criatividade e na inspiração coletiva.
+O site não é um e-commerce; o foco é maximizar o uso do guarda-roupa existente.
+A funcionalidade de visualizar looks de outros usuários serve como fonte de inspiração,
+dando ideias que são mais aplicáveis à realidade do usuário, pois utilizam peças cotidianas.
+
+Por fim, há um impacto de incentiva ao consumo consciente.
+Ao ajudar as pessoas a variarem os looks com o que já possuem,
+o projeto incentiva o uso eficiente do guarda-roupa.
+Embora não seja uma funcionalidade inicial, a possibilidade futura de indicar peças-chave faltantes
+pode ajudar o usuário a atualizar seu armário de forma mais planejada e sem gastos excessivos,
+promovendo uma relação mais responsável com o consumo de moda.
