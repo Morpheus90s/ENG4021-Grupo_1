@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Findress - Cadastro</title>
+    
+    <link rel="stylesheet" href="../HTML/css/cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="main-header">
+        <a href="index.html" class="logo-link">
+            <img src="../HTML/img/logo.png" alt="Findress Logo"> <span class="logo">Findress</span>
+        </a>
+        
+        <div class="search-bar-header">
+            <input type="search" placeholder="Busque por blusa, look de inverno ou inspiração...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        
+        <nav class="user-auth">
+            <a href="login.html" class="btn-auth btn-secondary">Entrar</a>
+        </nav>
+    </header>
+
+    <main class="auth-container">
+        <div class="auth-box">
+            <h2>Crie sua Conta</h2>
+            <p>Comece a organizar seu guarda-roupa e a montar looks incríveis!</p>
+
+            <form class="auth-form">
+                
+                <div class="input-group">
+                    <label for="name"><i class="fa-regular fa-user"></i> Nome Completo</label>
+                    <input type="text" id="name" placeholder="Seu nome" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email"><i class="fa-regular fa-envelope"></i> E-mail</label>
+                    <input type="email" id="email" placeholder="seu.email@exemplo.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password"><i class="fa-solid fa-lock"></i> Senha</label>
+                    <input type="password" id="password" placeholder="Mínimo de 6 caracteres" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirm-password"><i class="fa-solid fa-lock"></i> Confirmar Senha</label>
+                    <input type="password" id="confirm-password" placeholder="Repita a senha" required>
+                </div>
+                
+                <button type="submit" class="cta-button full-width">Cadastrar</button>
+                
+                <p class="switch-auth">
+                    Já tem conta? <a href="login.html">Faça Login</a>
+                </p>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
