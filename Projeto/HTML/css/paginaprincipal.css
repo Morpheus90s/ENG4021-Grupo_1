@@ -7,6 +7,7 @@
     --footer-bg: #f8f8f8;
 }
 
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +21,7 @@ body {
     line-height: 1.6;
 }
 
-/* ====== HEADER ====== */
+/* HEADER */
 .main-header {
     padding: 1rem 5%;
     display: flex;
@@ -72,11 +73,12 @@ body {
     cursor: pointer;
     transition: 0.3s;
 }
+
 .search-bar-header button:hover {
     background-color: var(--lilac-dark);
 }
 
-/* ====== BOTÕES ====== */
+/* BOTÕES */
 .btn-auth {
     text-decoration: none;
     padding: 0.6rem 1.2rem;
@@ -89,6 +91,7 @@ body {
 .btn-secondary {
     color: var(--lilac-primary);
 }
+
 .btn-secondary:hover {
     background-color: var(--lilac-light);
 }
@@ -97,21 +100,23 @@ body {
     background-color: var(--lilac-primary);
     color: #fff;
 }
+
 .btn-primary:hover {
     background-color: var(--lilac-dark);
 }
 
-/* ====== HERO ====== */
+/* HERO */
 .home-hero {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 4rem 5%;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .hero-content {
-    max-width: 50%;
+    max-width: 500px;
 }
 
 .hero-content h2 {
@@ -140,6 +145,7 @@ body {
     align-items: center;
     gap: 0.5rem;
 }
+
 .cta-button:hover {
     background-color: var(--lilac-dark);
 }
@@ -149,14 +155,17 @@ body {
     text-decoration: none;
     font-weight: 500;
 }
+
 .link-secondary:hover {
     color: var(--lilac-dark);
 }
 
-/* ====== HERO IMAGENS ====== */
+/* IMAGENS */
 .hero-visual {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .clothes-img {
@@ -167,11 +176,12 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
+
 .clothes-img:hover {
     transform: scale(1.05);
 }
 
-/* ====== FOOTER ====== */
+/* FOOTER */
 .main-footer {
     background-color: var(--footer-bg);
     color: #555;
@@ -198,6 +208,7 @@ body {
     margin-right: 0.8rem;
     transition: color 0.3s;
 }
+
 .social-icons a:hover {
     color: var(--lilac-primary);
 }
@@ -208,7 +219,7 @@ body {
     padding-top: 1rem;
 }
 
-/* ====== RESPONSIVO ====== */
+/* RESPONSIVO */
 @media (max-width: 768px) {
     .home-hero {
         flex-direction: column;
@@ -220,7 +231,6 @@ body {
     }
 
     .hero-visual {
-        flex-wrap: wrap;
         justify-content: center;
     }
 }
