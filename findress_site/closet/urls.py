@@ -1,10 +1,8 @@
-# Em findress_site/closet/urls.py
-
 from django.urls import path
-from . import views
+from . import views # Importa o views.py do app
 
 urlpatterns = [
-    # Quando o usuário acessar a URL '/pecas/', a view 'listar_pecas' será chamada.
-    # Este é o link para a sua Página de Consulta.
+    # Quando o usuário acessar a URL 'pecas/', o Django vai chamar
+    # a função 'listar_pecas' que você criou no views.py
     path('pecas/', views.listar_pecas, name='lista_pecas'),
 ]

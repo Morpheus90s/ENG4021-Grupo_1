@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Closet - Findress</title>
+    <style>
+        /* Estilo básico para sua tabela, como no exemplo do roteiro */
+        body { font-family: sans-serif; padding: 20px; color: #333; }
+        h1 { color: #6a0dad; } /* Cor do seu projeto */
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background-color: #f5f5ff; color: #6a0dad; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        .empty { text-align: center; padding: 20px; color: #888; }
+    </style>
+</head>
+<body>
+  <h1>Lista de Peças Cadastradas</h1>
+  
+  <table>
+    <thead>
+        <tr>
+            <!-- Colunas do seu banco de dados -->
+            <th>Nome da Peça</th>
+            <th>Categoria</th>
+            <th>Cor</th>
+            <th>Tamanho</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- O Django vai repetir este bloco para cada peça no banco -->
+        {% for peca in pecas %}
+          <tr>
+            <td>{{ peca.nome_peca }}</td>
+            <td>{{ peca.categoria }}</td>
+            <td>{{ peca.cor }}</td>
+            <td>{{ peca.tamanho }}</td>
+          </tr>
+        {% empty %}
+          <!-- Se o banco estiver vazio, mostra esta mensagem -->
+          <tr>
+            <td colspan="4" class="empty">
+              Ainda não há peças cadastradas.
+            </td>
+          </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
+

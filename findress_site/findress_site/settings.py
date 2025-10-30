@@ -27,8 +27,9 @@ DEBUG = True
 
 # Em findress_site/findress_site/settings.py
 
+# Esta linha permite que o seu link do Codespace acesse o site
 ALLOWED_HOSTS = [
-    '.app.github.dev',
+    '.app.github.dev', # Permite qualquer link do Codespace
     'localhost',
     '127.0.0.1',
 ]
@@ -133,5 +134,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # Adicione no final de findress_site/findress_site/settings.py
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://studious-chainsaw-6xwv5vq9qw93r757-8000.app.github.dev',
+    '[https://studious-chainsaw-6xwv5vq9qw93r757-8000.app.github.dev](https://studious-chainsaw-6xwv5vq9qw93r757-8000.app.github.dev)',
+    'https://localhost:8000', # Adiciona o endereço que o erro 403 mencionou
+    'https://*.app.github.dev', # Um curinga para garantir
 ]

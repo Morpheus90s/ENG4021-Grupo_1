@@ -1,9 +1,10 @@
-# findress_site/urls.py
-
 from django.contrib import admin
-from django.urls import path, include # Adicione 'include'
+from django.urls import path, include # Certifique-se de adicionar 'include'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('closet.urls')), # <-- ADICIONE ESTA LINHA
+    # Esta linha diz ao Django para incluir todas as rotas
+    # do arquivo 'closet/urls.py'.
+    # O '' significa que ele vai procurar na raiz.
+    path('', include('closet.urls')), 
 ]
