@@ -4,23 +4,48 @@
     <meta charset="UTF-8">
     <title>Meu Closet - Findress</title>
     <style>
-        /* Estilo básico para sua tabela, como no exemplo do roteiro */
         body { font-family: sans-serif; padding: 20px; color: #333; }
-        h1 { color: #6a0dad; } /* Cor do seu projeto */
+        h1 { color: #6a0dad; }
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
         th { background-color: #f5f5ff; color: #6a0dad; }
         tr:nth-child(even) { background-color: #f9f9f9; }
         .empty { text-align: center; padding: 20px; color: #888; }
+        
+        /* --- Estilo para o cabeçalho com o botão --- */
+        .header-busca { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 10px;
+        }
+        .btn-buscar { 
+            padding: 10px 15px; 
+            font-size: 16px; 
+            background-color: #6a0dad; 
+            color: white; 
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none; /* Remove o sublinhado do link */
+        }
+        .btn-buscar:hover { background-color: #5a0ca0; }
     </style>
 </head>
 <body>
-  <h1>Lista de Peças Cadastradas</h1>
+  
+  <div class="header-busca">
+    <h1>Lista de Peças Cadastradas</h1>
+    {# 
+      Este link aponta para a rota 'pagina_busca', 
+      que é o seu formulário de filtro.
+    #}
+    <a href="{% url 'pagina_busca' %}" class="btn-buscar">Buscar Peças</a>
+  </div>
   
   <table>
     <thead>
         <tr>
-            <!-- Colunas do seu banco de dados -->
             <th>Nome da Peça</th>
             <th>Categoria</th>
             <th>Cor</th>
@@ -28,7 +53,8 @@
         </tr>
     </thead>
     <tbody>
-        <!-- O Django vai repetir este bloco para cada peça no banco -->
+        {# CORREÇÃO: Este é um comentário Django. Ele não vai quebrar o código. #}
+        {# O loop {% for %} mostra todas as peças que a view 'listar_pecas' enviou #}
         {% for peca in pecas %}
           <tr>
             <td>{{ peca.nome_peca }}</td>
@@ -36,16 +62,17 @@
             <td>{{ peca.cor }}</td>
             <td>{{ peca.tamanho }}</td>
           </tr>
+        {# A tag {% empty %} mostra uma mensagem se o banco estiver vazio #}
         {% empty %}
-          <!-- Se o banco estiver vazio, mostra esta mensagem -->
           <tr>
             <td colspan="4" class="empty">
-              Ainda não há peças cadastradas.
+              Ainda não há peças cadastradas. (Vá em /admin/ para adicionar!)
             </td>
           </tr>
         {% endfor %}
     </tbody>
   </table>
+
 </body>
 </html>
 
