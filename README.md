@@ -4,11 +4,11 @@ Findress -  O app que te ajuda a se vestir !
 
 
 
-Membros da equipe Findress : 
-   Guilherme Perrone ,
-   Guilherme Laureano ,
-   Pedro Augusto Bessera ,
-   João Victor De Freitas 
+Membros da equipe Findress : <br><br>
+   Guilherme Perrone <br>
+   Guilherme Laureano <br>
+   Pedro Augusto Bessera <br>
+   João Victor De Freitas <br>
    <br>
    <br>
    <br>
@@ -20,8 +20,8 @@ Membros da equipe Findress :
 <br>
 <br>
 
-   E porque tivemos essa ideia ??
-   Simples . 
+   E porque tivemos essa ideia ??<br><br>
+   Simples . <br>
    <br>
    Não existe nenhuma empresa ( famosa ) que ofereca os serviços que nos oferecemos ! É um mercado enorme, pouco explorado,com pouca ofertas e MUITO potencial 
    <br>
