@@ -1,12 +1,12 @@
-
-from django.urls import path
-from . import views
+from django.contrib import admin
+from django.urls import path, include
 
 urlpatterns = [
-   
-    path('pecas/', views.listar_pecas, name='lista_pecas'),
+    path('admin/', admin.site.urls),
     
-    path('busca/', views.pagina_busca, name='pagina_busca'),
+    # Esta é a linha correta, aponta para o app 'closet'
+    path('closet/', include('closet.urls')),
     
-    path('resultado/', views.resultado_busca, name='resultado_busca'),
+    # Esta linha cuida das páginas de login/logout
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
