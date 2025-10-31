@@ -14,6 +14,11 @@ Membros da equipe Findress :
 
    Nossa equipe, ao escolher o ousado tema MODA, teve  uma ideia incrível, a criação e desenvolvimento de um app/site que auxilia pessoas a combinarem suas roupas no dia a dia, tornando possível assim, explorar infinitas combinações de peças do seu armário !! 
 
+   E porque tivemos essa ideia ?? Simples . 
+   Não existe nenhuma empresa ( famosa ) que ofereca os serviços que nos oferecemos ! É um mercado enorme, pouco explorado,com pouca ofertas e MUITO potencial 
+
+   
+
 
 O SITE FUNCIONA DA SEGUINTE MANEIRA :
 
