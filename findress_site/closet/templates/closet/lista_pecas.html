@@ -1,46 +1,21 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Meu Closet - Findress</title>
-    <style>
-        body { font-family: sans-serif; padding: 20px; color: #333; }
-        h1 { color: #6a0dad; }
-        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
-        th { background-color: #f5f5ff; color: #6a0dad; }
-        tr:nth-child(even) { background-color: #f9f9f9; }
-        .empty { text-align: center; padding: 20px; color: #888; }
-        
-        /* --- Estilo para o cabeçalho com o botão --- */
-        .header-busca { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            margin-bottom: 10px;
-        }
-        .btn-buscar { 
-            padding: 10px 15px; 
-            font-size: 16px; 
-            background-color: #6a0dad; 
-            color: white; 
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            text-decoration: none; /* Remove o sublinhado do link */
-        }
-        .btn-buscar:hover { background-color: #5a0ca0; }
-    </style>
-</head>
-<body>
+{% extends 'closet/base.html' %}
+
+{% block title %}
+  {% if busca %}
+    Resultados para {{ busca }}
+  {% else %}
+    Meu Closet
+  {% endif %}
+{% endblock %}
+
+{% block content %}
   
-  <div class="header-busca">
-    <h1>Lista de Peças Cadastradas</h1>
-    {# 
-      Este link aponta para a rota 'pagina_busca', 
-      que é o seu formulário de filtro.
-    #}
-    <a href="{% url 'pagina_busca' %}" class="btn-buscar">Buscar Peças</a>
+  <div class="page-header">
+    {% if busca %}
+      <h1>Exibindo resultados para: "{{ busca }}"</h1>
+    {% else %}
+      <h1>Todas as Peças do Closet</h1>
+    {% endif %}
   </div>
   
   <table>
@@ -53,8 +28,6 @@
         </tr>
     </thead>
     <tbody>
-        {# CORREÇÃO: Este é um comentário Django. Ele não vai quebrar o código. #}
-        {# O loop {% for %} mostra todas as peças que a view 'listar_pecas' enviou #}
         {% for peca in pecas %}
           <tr>
             <td>{{ peca.nome_peca }}</td>
@@ -62,17 +35,20 @@
             <td>{{ peca.cor }}</td>
             <td>{{ peca.tamanho }}</td>
           </tr>
-        {# A tag {% empty %} mostra uma mensagem se o banco estiver vazio #}
         {% empty %}
           <tr>
-            <td colspan="4" class="empty">
-              Ainda não há peças cadastradas. (Vá em /admin/ para adicionar!)
+            <td colspan="4">
+              <div class="empty-message">
+                {% if busca %}
+                  Nenhuma peça encontrada com o termo "{{ busca }}".
+                {% else %}
+                  Seu closet está vazio. Que tal adicionar a primeira peça no <a href="/admin/">Admin</a>?
+                {% endif %}
+              </div>
             </td>
           </tr>
         {% endfor %}
     </tbody>
   </table>
 
-</body>
-</html>
-
+{% endblock %}

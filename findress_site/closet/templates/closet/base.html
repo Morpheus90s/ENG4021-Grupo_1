@@ -1,0 +1,28 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Findress{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="{% url 'lista_pecas' %}" class="logo">Findress</a>
+        <nav class="main-nav">
+            <a href="{% url 'lista_pecas' %}">Meu Closet</a>
+            <a href="{% url 'pagina_busca' %}">Buscar Peças</a>
+            <a href="/admin/" target="_blank">Admin</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        {% block content %}
+        {% endblock %}
+    </main>
+    
+</body>
+</html>

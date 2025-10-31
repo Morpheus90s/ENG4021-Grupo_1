@@ -1,0 +1,155 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --lilac-primary: #8a2be2;
+    --lilac-dark: #6a0dad;
+    --lilac-light: #d4c1ed;
+    --lilac-bg: #f5f5ff;
+    --text-color: #4a4a4a;
+    --grey-light: #f8f9fa;
+    --grey-border: #e9ecef;
+    --footer-bg: #f2f2f2;
+    --footer-text: #666;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--lilac-bg);
+    margin: 0;
+}
+
+.main-header {
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--grey-border);
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--lilac-primary);
+    text-decoration: none;
+}
+
+.main-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.2s;
+    border-radius: 4px;
+}
+
+.main-nav a:hover {
+    color: var(--lilac-primary);
+    background-color: var(--lilac-bg);
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Estilos para a Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+th, td {
+    border: 1px solid var(--grey-border);
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+th {
+    background-color: var(--lilac-bg);
+    color: var(--lilac-dark);
+    font-weight: 600;
+}
+tr:nth-child(even) {
+    background-color: var(--grey-light);
+}
+
+/* Estilos para Formulários */
+.form-container {
+    padding: 2rem;
+    border: 1px solid var(--grey-border);
+    border-radius: 8px;
+    background-color: var(--grey-light);
+}
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--grey-border);
+    border-radius: 25px;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box; /* Garante que o padding não quebre o layout */
+}
+.btn-primary {
+    text-decoration: none;
+    padding: 0.7rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border: 1px solid var(--lilac-primary);
+    background-color: var(--lilac-primary);
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.btn-primary:hover {
+    background-color: var(--lilac-dark);
+}
+.empty-message {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--grey-light);
+    border-radius: 8px;
+    color: var(--footer-text);
+}
+
+/* Link simples, como o "Buscar" na lista */
+.btn-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.2s;
+    border: 1px solid var(--lilac-primary);
+    background-color: var(--lilac-primary);
+    color: #fff;
+    margin-bottom: 1rem;
+}
+.btn-link:hover {
+    background-color: var(--lilac-dark);
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--lilac-bg);
+    padding-bottom: 1rem;
+}
