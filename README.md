@@ -17,10 +17,14 @@ Membros da equipe Findress :
    E porque tivemos essa ideia ?? Simples . 
    Não existe nenhuma empresa ( famosa ) que ofereca os serviços que nos oferecemos ! É um mercado enorme, pouco explorado,com pouca ofertas e MUITO potencial 
 
-   
+  
+  
+   Dentro do Findress, suas opções são infinitas. Você pode escanear suas roupas, montar seu guarda-roupa online, ver recomendações de looks personalizadas de acordo com o tempo, e planejar seus looks para 
+   ocasiões especiais, como festas, jantares, entrevistas e muito mais!"
 
+   Abaixo, segue uma breve explicação :
 
-O SITE FUNCIONA DA SEGUINTE MANEIRA :
+   O SITE FUNCIONA DA SEGUINTE MANEIRA :
 
    
 
