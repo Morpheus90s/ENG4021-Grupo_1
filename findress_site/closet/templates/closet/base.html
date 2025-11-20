@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Findress{% endblock %}</title>
     
-    <!-- 1. CARREGA O CSS GLOBAL (Comum a todos) -->
-    <!-- Mudamos de 'style.css' para 'base.css' conforme o novo plano -->
+    <!-- 1. CARREGA O CSS GLOBAL -->
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     
-    <!-- 2. ESPAÇO RESERVADO PARA CSS ESPECÍFICO DAS PÁGINAS -->
-    <!-- Isso permite que a home.html carregue o home.css, por exemplo -->
+    <!-- 2. ESPAÇO RESERVADO PARA CSS ESPECÍFICO -->
     {% block extra_css %}
     {% endblock %}
 </head>
@@ -22,17 +20,36 @@
         <a href="{% url 'home' %}" class="logo">Findress</a>
         
         <nav class="main-nav">
-            <!-- Links de Navegação -->
+            <!-- Links Públicos (Todo mundo vê) -->
             <a href="{% url 'lista_pecas' %}">Meu Closet</a>
             <a href="{% url 'pagina_busca' %}">Buscar Peças</a>
             <a href="{% url 'sobre' %}">Sobre a Marca</a>
             
-            <!-- Botão de Admin -->
-            <a href="/admin/" class="nav-btn" target="_blank">Admin</a>
+            <!-- LÓGICA DE USUÁRIO -->
+            {% if user.is_authenticated %}
+                <!-- Se ESTIVER logado, mostra Perfil e Sair -->
+                <a href="{% url 'perfil' %}" class="nav-link-highlight">Meu Perfil</a>
+                
+                <!-- Formulário de Logout (Segurança do Django exige POST) -->
+                <form action="{% url 'logout' %}" method="post" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="nav-btn-logout">Sair</button>
+                </form>
+
+            {% else %}
+                <!-- Se NÃO estiver logado, mostra apenas Entrar -->
+                <div class="auth-buttons">
+                    
+                    <!-- CORREÇÃO AQUI: Agora aponta para a rota 'entrar' que criamos -->
+                    <a href="{% url 'entrar' %}" class="nav-btn-login">Entrar</a>
+                    
+                </div>
+            {% endif %}
         </nav>
     </header>
 
     <main class="main-content">
+        <!-- O conteúdo das outras páginas será inserido aqui -->
         {% block content %}
         {% endblock %}
     </main>
@@ -40,6 +57,11 @@
     <!-- Rodapé Global -->
     <footer>
         <p>&copy; 2025 Findress - Seu estilo, suas regras.</p>
+        
+        <!-- Link de Admin movido para cá (Discreto) -->
+        <div class="footer-admin">
+            <a href="/admin/" target="_blank">Área Administrativa</a>
+        </div>
     </footer>
     
 </body>

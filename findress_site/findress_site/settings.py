@@ -15,12 +15,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # !!! IMPORTANTE: MANTENHA A SUA SECRET_KEY ORIGINAL !!!
 # !!! COLE A SUA CHAVE QUE JÁ ESTÁ NO SEU ARQUIVO AQUI !!!
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-SECRET_KEY = "django-insecure-!m_8vnt0q%1jfl9ggb*mp$^m@thw%xf=978r)q!qc@!di)0co@"
+SECRET_KEY = 'django-insecure-!m_8vnt0q%1jfl9ggb*mp$^m@thw%xf=978r)q!qc@!di)0co@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# --- CONFIGURAÇÃO DE ACESSO (PARA O CODESPACE FUNCIONAR) ---
+# --- CONFIGURAÇÃO DE ACESSO (ALLOWED_HOSTS) ---
 ALLOWED_HOSTS = [
     '.app.github.dev', # Permite qualquer link do Codespace
     'localhost',
@@ -56,8 +56,8 @@ ROOT_URLCONF = "findress_site.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [], # O Django vai procurar na pasta 'templates' de cada app
-        "APP_DIRS": True, # Esta linha é a mais importante
+        "DIRS": [], 
+        "APP_DIRS": True, 
         "OPTIONS": {
             "context_processors": [
                 "django.template.context_processors.debug",
@@ -82,7 +82,6 @@ DATABASES = {
 
 
 # Password validation
-# ... (deixe como está no seu arquivo) ...
 AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",},
     {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",},
@@ -92,40 +91,38 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 # --- Internacionalização ---
-LANGUAGE_CODE = "pt-br" # Mudado para Português
-TIME_ZONE = "America/Sao_Paulo" # Mudado para Fuso Horário de São Paulo
+LANGUAGE_CODE = "pt-br" 
+TIME_ZONE = "America/Sao_Paulo" 
 USE_I18N = True
 USE_TZ = True
 
 
-# --- CORREÇÃO 1: CONFIGURAÇÃO DE ESTILO (CSS) ---
-# https://docs.djangoproject.com/en/5.2/howto/static-files/
+# --- CONFIGURAÇÃO DE ESTILO (CSS) ---
 STATIC_URL = "static/"
 
-# 
-# ESTA LINHA ESTAVA FALTANDO. 
-# Ela diz ao Django para também procurar arquivos CSS na pasta 'static'
-# que fica na raiz do seu projeto (findress_site/static/css/style.css)
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
 
 # --- CONFIGURAÇÃO DE IMAGENS (Uploads) ---
 MEDIA_URL = '/media/'
-# Diz ao Django para salvar os uploads de imagem na pasta 'media'
 MEDIA_ROOT = BASE_DIR / 'media' 
 
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-# --- CORREÇÃO 2: CORREÇÃO DO ERRO 403 (CSRF) ---
-# A sua versão tinha um link em Markdown. Esta é a versão correta em Python.
+# --- CORREÇÃO DO ERRO 403 (CSRF) ---
+# Adicionamos explicitamente a porta 8001 aqui
 CSRF_TRUSTED_ORIGINS = [
     'https://studious-chainsaw-6xwv5vq9qw93r757-8000.app.github.dev',
-    'https://localhost:8000', # Necessário por causa do erro 403
+    'https://studious-chainsaw-6xwv5vq9qw93r757-8001.app.github.dev', # Link externo porta 8001
+    'https://localhost:8000',
     'http://localhost:8000',
-    'http://127.0.0.1:8000',
-    'https://*.app.github.dev' # Curinga para todos os Codespaces
+    # --- AQUI ESTÃO AS LINHAS QUE CORRIGEM O SEU ERRO ATUAL ---
+    'https://localhost:8001', 
+    'http://localhost:8001',
+    'http://127.0.0.1:8001',
+    # ----------------------------------------------------------
+    'https://*.app.github.dev',
 ]
-

@@ -1,4 +1,4 @@
-/* Google Font */
+/* --- ARQUIVO GLOBAL: BASE.CSS --- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 :root {
@@ -10,6 +10,8 @@
     --white: #ffffff;
     --grey-light: #f8f9fa;
     --grey-border: #e9ecef;
+    --footer-bg: #f2f2f2;
+    --footer-text: #666;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -19,12 +21,13 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     background-color: var(--lilac-bg);
+    margin: 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* --- CABEÇALHO GLOBAL --- */
+/* --- CABEÇALHO --- */
 .main-header {
     padding: 1rem 5%;
     display: flex;
@@ -45,6 +48,7 @@ body {
 
 .main-nav {
     display: flex;
+    align-items: center;
     gap: 1.5rem;
 }
 
@@ -59,26 +63,92 @@ body {
     color: var(--lilac-primary);
 }
 
-/* Botão de destaque no menu */
-.nav-btn {
+/* Link de destaque (Meu Perfil quando logado) */
+.nav-link-highlight {
+    color: var(--lilac-primary) !important;
+    font-weight: 600 !important;
+}
+
+/* --- BOTÕES DE AUTENTICAÇÃO (NOVOS ESTILOS) --- */
+.auth-buttons {
+    margin-left: 10px;
+    padding-left: 20px;
+    border-left: 1px solid var(--grey-border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Botão Entrar */
+.nav-btn-login {
     background-color: var(--lilac-primary);
     color: var(--white) !important;
-    padding: 0.5rem 1.2rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 20px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: 600;
 }
 
-.nav-btn:hover {
+.nav-btn-login:hover {
     background-color: var(--lilac-dark);
+    transform: translateY(-2px);
 }
 
-/* --- CONTEÚDO PRINCIPAL --- */
+/* Botão Sair (Logout) */
+.nav-btn-logout {
+    background: none;
+    border: 1px solid var(--grey-border);
+    color: #666;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    transition: all 0.2s;
+}
+
+.nav-btn-logout:hover {
+    background-color: #fff0f0; /* Vermelho claro */
+    color: #d9534f;
+    border-color: #d9534f;
+}
+
+/* Botão Admin - Discreto */
+.nav-btn-admin {
+    font-size: 0.85rem;
+    color: #999 !important;
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--grey-border);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-btn-admin:hover {
+    background-color: var(--grey-light);
+    color: var(--text-color) !important;
+    border-color: #ccc;
+}
+
+.admin-icon {
+    font-size: 0.9rem;
+}
+
+/* --- LAYOUT PRINCIPAL --- */
 .main-content {
-    flex: 1; /* Empurra o rodapé para baixo */
-    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    flex: 1;
+    width: 90%;
 }
 
-/* Container padrão para páginas internas (como a lista) */
+/* Container padrão para páginas internas */
 .container {
     max-width: 1200px;
     margin: 2rem auto;
@@ -93,4 +163,21 @@ footer {
     color: #888;
     margin-top: auto;
     border-top: 1px solid var(--grey-border);
+}
+
+/* Admin no rodapé - Bem discreto */
+.footer-admin {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+}
+
+.footer-admin a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-admin a:hover {
+    color: var(--lilac-primary);
+    text-decoration: underline;
 }

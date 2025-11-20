@@ -1,19 +1,25 @@
 from django.urls import path
 from . import views
 
-# Este arquivo aponta para as suas 3 funções no views.py
-# Ele NÃO PODE ter 'include()'
-
 urlpatterns = [
-    # 1. Aponta para a sua view 'listar_pecas'
-    # URL: /pecas/
+    # 0. ROTA DA HOME
+    path('', views.home, name='home'),
+
+    # 1. Lista Completa
     path('pecas/', views.listar_pecas, name='lista_pecas'),
     
-    # 2. Aponta para a sua view 'pagina_busca'
-    # URL: /busca/
+    # 2. Formulário de Busca
     path('busca/', views.pagina_busca, name='pagina_busca'),
     
-    # 3. Aponta para a sua view 'resultado_busca'
-    # URL: /resultado/
+    # 3. Resultados da Busca
     path('resultado/', views.resultado_busca, name='resultado_busca'),
+
+    # 4. Sobre a Marca
+    path('sobre/', views.sobre, name='sobre'),
+
+    # 5. Meu Perfil
+    path('perfil/', views.perfil, name='perfil'),
+
+    # 6. Rota de Login (Bypass) - ESTA É A QUE FALTAVA
+    path('entrar/', views.entrar, name='entrar'),
 ]

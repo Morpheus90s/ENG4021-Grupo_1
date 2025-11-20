@@ -1,21 +1,32 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import PecaRoupa
+# Importações necessárias para o login manual
+from django.contrib.auth import login
+from django.contrib.auth.models import User
 
+# --- 1. PÁGINA INICIAL (Home) ---
+def home(request):
+    """Renderiza a página inicial com o banner e cards."""
+    return render(request, 'closet/home.html')
+
+# --- 2. LISTA COMPLETA (Página de Consulta) ---
 def listar_pecas(request):
-    """Mostra todas as peças."""
+    """Mostra todas as peças cadastradas."""
     todas_as_pecas = PecaRoupa.objects.all()
     contexto = {
         'pecas': todas_as_pecas,
-        'busca': None,  
+        'busca': None, 
     }
     return render(request, 'closet/lista_pecas.html', contexto)
 
+# --- 3. FORMULÁRIO DE BUSCA ---
 def pagina_busca(request):
-    """Mostra a página com o formulário de busca."""
+    """Mostra apenas o formulário para digitar a busca."""
     return render(request, 'closet/pagina_busca.html')
 
+# --- 4. RESULTADOS DA BUSCA ---
 def resultado_busca(request):
-    """Recebe a busca, filtra o banco e mostra os resultados."""
+    """Recebe o termo, filtra o banco e reutiliza a lista para mostrar."""
     busca_digitada = request.GET.get('busca', '')
 
     if busca_digitada:
@@ -27,5 +38,35 @@ def resultado_busca(request):
         'pecas': pecas_filtradas,
         'busca': busca_digitada,
     }
-    
     return render(request, 'closet/lista_pecas.html', contexto)
+
+# --- 5. SOBRE A MARCA ---
+def sobre(request):
+    """Renderiza a página de texto 'Sobre'."""
+    return render(request, 'closet/sobre.html')
+
+# --- 6. MEU PERFIL ---
+def perfil(request):
+    """Renderiza a página de perfil do usuário."""
+    return render(request, 'closet/perfil.html')
+
+# --- 7. LOGIN MÁGICO (BYPASS) ---
+def entrar(request):
+    """
+    Simula um login. Se for POST (clicou no botão),
+    loga o primeiro usuário do banco automaticamente.
+    """
+    if request.method == 'POST':
+        # Pega o primeiro usuário que encontrar (geralmente o admin)
+        usuario_magico = User.objects.first()
+        
+        if usuario_magico:
+            # Força o login desse usuário
+            login(request, usuario_magico)
+            
+            # Renderiza a mesma página, mas agora o base.html vai detectar 
+            # que o usuário está logado e mudar o menu.
+            return render(request, 'registration/login.html')
+            
+    # Se for GET (apenas abriu a página), mostra o formulário
+    return render(request, 'registration/login.html')

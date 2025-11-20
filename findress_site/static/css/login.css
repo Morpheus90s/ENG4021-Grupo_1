@@ -1,0 +1,57 @@
+/* --- ARQUIVO ESPECÍFICO: LOGIN.CSS --- */
+
+/* Container centralizado do login */
+.login-wrapper {
+    max-width: 400px;
+    margin: 3rem auto; /* Margem superior/inferior e centralizado horizontalmente */
+    padding: 1rem;
+}
+
+/* Título "Bem-vindo de volta" */
+.login-title {
+    text-align: center;
+    color: var(--lilac-dark);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Espaçamento entre campos */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+/* Estilo dos rótulos (Usuário/Senha) */
+.login-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--lilac-primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Classe utilitária para o botão ocupar 100% da largura */
+.btn-full-width {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Rodapé do card de login (Link de cadastro) */
+.login-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.login-footer a {
+    color: var(--lilac-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.login-footer a:hover {
+    color: var(--lilac-dark);
+    text-decoration: underline;
+}
