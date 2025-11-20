@@ -1,0 +1,96 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --lilac-primary: #8a2be2;
+    --lilac-dark: #6a0dad;
+    --lilac-light: #d4c1ed;
+    --lilac-bg: #f5f5ff;
+    --text-color: #4a4a4a;
+    --white: #ffffff;
+    --grey-light: #f8f9fa;
+    --grey-border: #e9ecef;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--lilac-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- CABEÇALHO GLOBAL --- */
+.main-header {
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--grey-border);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--lilac-primary);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.main-nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--lilac-primary);
+}
+
+/* Botão de destaque no menu */
+.nav-btn {
+    background-color: var(--lilac-primary);
+    color: var(--white) !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: var(--lilac-dark);
+}
+
+/* --- CONTEÚDO PRINCIPAL --- */
+.main-content {
+    flex: 1; /* Empurra o rodapé para baixo */
+    width: 100%;
+}
+
+/* Container padrão para páginas internas (como a lista) */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* --- RODAPÉ GLOBAL --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--white);
+    color: #888;
+    margin-top: auto;
+    border-top: 1px solid var(--grey-border);
+}

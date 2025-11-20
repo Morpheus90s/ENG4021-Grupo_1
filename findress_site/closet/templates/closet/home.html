@@ -1,0 +1,44 @@
+{% extends 'closet/base.html' %}
+{% load static %}
+
+{% block title %}Início - Findress{% endblock %}
+
+{# Aqui injetamos o CSS específico desta página #}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <!-- Seção Hero (Banner) -->
+    <section class="hero">
+        <h1>Organize seu estilo com Findress</h1>
+        <p>O seu assistente pessoal de moda. Cadastre suas roupas, monte looks incríveis e redescubra o seu guarda-roupa.</p>
+        
+        <div style="margin-top: 2rem;">
+            <a href="{% url 'lista_pecas' %}" class="cta-button">Ver Meu Closet</a>
+        </div>
+    </section>
+
+    <!-- Funcionalidades -->
+    <section class="features">
+        <div class="feature-card">
+            <span class="feature-icon">👕</span>
+            <h3>Organização</h3>
+            <p>Cadastre todas as suas peças e saiba exatamente o que você tem no armário.</p>
+        </div>
+
+        <div class="feature-card">
+            <span class="feature-icon">🔍</span>
+            <h3>Busca Rápida</h3>
+            <p>Encontre aquela peça específica em segundos usando nossos filtros inteligentes.</p>
+        </div>
+
+        <div class="feature-card">
+            <span class="feature-icon">✨</span>
+            <h3>Inspiração</h3>
+            <p>Visualize suas roupas de forma clara e tenha novas ideias de combinações.</p>
+        </div>
+    </section>
+
+{% endblock %}

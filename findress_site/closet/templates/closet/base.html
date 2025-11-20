@@ -1,4 +1,3 @@
-
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -6,16 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Findress{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
+    <!-- 1. CARREGA O CSS GLOBAL (Comum a todos) -->
+    <!-- Mudamos de 'style.css' para 'base.css' conforme o novo plano -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    
+    <!-- 2. ESPAÇO RESERVADO PARA CSS ESPECÍFICO DAS PÁGINAS -->
+    <!-- Isso permite que a home.html carregue o home.css, por exemplo -->
+    {% block extra_css %}
+    {% endblock %}
 </head>
 <body>
 
     <header class="main-header">
-        <a href="{% url 'lista_pecas' %}" class="logo">Findress</a>
+        <!-- Logo aponta para a Home -->
+        <a href="{% url 'home' %}" class="logo">Findress</a>
+        
         <nav class="main-nav">
+            <!-- Links de Navegação -->
             <a href="{% url 'lista_pecas' %}">Meu Closet</a>
             <a href="{% url 'pagina_busca' %}">Buscar Peças</a>
-            <a href="/admin/" target="_blank">Admin</a>
+            <a href="{% url 'sobre' %}">Sobre a Marca</a>
+            
+            <!-- Botão de Admin -->
+            <a href="/admin/" class="nav-btn" target="_blank">Admin</a>
         </nav>
     </header>
 
@@ -23,6 +36,11 @@
         {% block content %}
         {% endblock %}
     </main>
+
+    <!-- Rodapé Global -->
+    <footer>
+        <p>&copy; 2025 Findress - Seu estilo, suas regras.</p>
+    </footer>
     
 </body>
 </html>

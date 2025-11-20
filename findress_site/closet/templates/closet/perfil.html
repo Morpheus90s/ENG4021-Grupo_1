@@ -1,0 +1,64 @@
+{% extends 'closet/base.html' %}
+{% load static %}
+
+{% block title %}Meu Perfil Fashion - Findress{% endblock %}
+
+{# CSS Específico do Perfil #}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/perfil.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <!-- Cabeçalho do Perfil -->
+    <div class="profile-header">
+        <div class="profile-avatar">
+            <!-- Mostra a primeira letra do usuário ou 'U' -->
+            {{ user.username|first|default:"U"|upper }}
+        </div>
+        <h1 class="profile-name">Olá, {{ user.username|default:"Fashionista" }}!</h1>
+        <p class="profile-bio">
+            Apaixonado por moda e em busca do look perfeito. Bem-vindo ao seu espaço pessoal no Findress.
+        </p>
+    </div>
+
+    <!-- Estatísticas Rápidas -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <span class="stat-number">12</span>
+            <span class="stat-label">Peças no Closet</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">5</span>
+            <span class="stat-label">Looks Criados</span>
+        </div>
+        <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Favoritos</span>
+        </div>
+    </div>
+
+    <!-- Detalhes de Estilo -->
+    <div class="preferences-section">
+        <h3>Minha Assinatura de Estilo</h3>
+        
+        <div style="margin-bottom: 1.5rem;">
+            <strong>Estilos Favoritos:</strong>
+            <div class="tag-container" style="margin-top: 0.5rem;">
+                <span class="tag">Casual Chic</span>
+                <span class="tag">Minimalista</span>
+                <span class="tag">Streetwear</span>
+            </div>
+        </div>
+
+        <div>
+            <strong>Cores Predominantes:</strong>
+            <div class="tag-container" style="margin-top: 0.5rem;">
+                <span class="tag">Preto</span>
+                <span class="tag">Branco</span>
+                <span class="tag">Lilás</span>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
