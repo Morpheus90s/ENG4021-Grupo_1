@@ -1,0 +1,114 @@
+{% extends 'closet/base.html' %}
+{% load static %}
+
+{% block title %}Criar Novo Look | Findress{% endblock %}
+
+{% block extra_head %}
+<style>
+    /* CSS Específico apenas para esta página (Seleção de Peças) */
+    .grid-selecao {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .item-selecao {
+        background: #fff;
+        border: 1px solid var(--grey-border);
+        border-radius: 8px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.2s, border-color 0.2s;
+        position: relative;
+    }
+
+    .item-selecao:hover {
+        transform: translateY(-3px);
+        border-color: var(--lilac-primary);
+    }
+
+    /* Esconde o checkbox padrão e estiliza o label */
+    .item-selecao input[type="checkbox"] {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        transform: scale(1.5);
+        accent-color: var(--lilac-primary);
+        z-index: 2;
+    }
+
+    .img-preview {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .item-info {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+        text-align: center;
+        color: var(--text-color);
+    }
+    
+    .section-title {
+        color: var(--lilac-dark);
+        margin: 1.5rem 0 1rem 0;
+        font-weight: 600;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+    <div class="page-header">
+        <h2>✨ Criar Novo Look</h2>
+        <a href="{% url 'lista_pecas' %}" style="color: var(--lilac-primary); text-decoration: none;">&larr; Voltar</a>
+    </div>
+
+    <div class="form-container">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <label for="id_nome">Nome do Look</label>
+            <input type="text" name="nome_look" id="id_nome" class="form-input" placeholder="Ex: Look para Trabalho, Jantar..." required>
+
+            <label for="id_foto">Foto do Look Pronto (Opcional)</label>
+            <input type="file" name="foto_principal" id="id_foto" class="form-input" accept="image/*">
+
+            <label for="id_desc">Descrição / Notas</label>
+            <textarea name="descricao" id="id_desc" class="form-input" rows="3" style="border-radius: 15px;" placeholder="Onde usar? Qual a vibe?"></textarea>
+
+            <h3 class="section-title">Quais peças compõem este look?</h3>
+            
+            <div class="grid-selecao">
+                {% for peca in pecas_disponiveis %}
+                <label class="item-selecao" for="peca_{{ peca.id }}">
+                    <input type="checkbox" name="pecas" value="{{ peca.id }}" id="peca_{{ peca.id }}">
+                    
+                    {% if peca.imagem %}
+                        <img src="{{ peca.imagem.url }}" alt="{{ peca.nome }}" class="img-preview">
+                    {% else %}
+                        <div class="img-preview" style="background: var(--grey-light); display:flex; align-items:center; justify-content:center; color: var(--lilac-light);">
+                            Sem Foto
+                        </div>
+                    {% endif %}
+                    
+                    <div class="item-info">
+                        <strong>{{ peca.nome_peca }}</strong><br>
+                        <small>{{ peca.categoria }}</small>
+                    </div>
+                </label>
+                {% empty %}
+                    <p>Você não tem peças cadastradas. <a href="#">Cadastre peças primeiro!</a></p>
+                {% endfor %}
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">
+                Salvar Look no Closet
+            </button>
+
+        </form>
+    </div>
+
+{% endblock %}

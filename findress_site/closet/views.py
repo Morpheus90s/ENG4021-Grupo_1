@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 from .models import PecaRoupa
 
+@login_required
 def listar_pecas(request):
     """Mostra todas as peças."""
     todas_as_pecas = PecaRoupa.objects.all()
@@ -12,7 +14,11 @@ def listar_pecas(request):
 
 def pagina_busca(request):
     """Mostra a página com o formulário de busca."""
-    return render(request, 'closet/pagina_busca.html')
+    
+    # CORREÇÃO AQUI:
+    # Apontar para o template correto, que está em 'closet/closet.html'
+    # (Baseado na sua estrutura de arquivos e no erro TemplateDoesNotExist)
+    return render(request, 'closet/closet.html')
 
 def resultado_busca(request):
     """Recebe a busca, filtra o banco e mostra os resultados."""
@@ -28,4 +34,8 @@ def resultado_busca(request):
         'busca': busca_digitada,
     }
     
+    # CORREÇÃO AQUI:
+    # Esta view deve mostrar a lista de resultados,
+    # então usamos 'closet/lista_pecas.html' (o mesmo de 'listar_pecas')
+    # e passamos o 'contexto' com os resultados.
     return render(request, 'closet/lista_pecas.html', contexto)

@@ -1,12 +1,11 @@
-from django.contrib import admin
-from django.urls import path, include
+# Este é o conteúdo CORRETO para findress_site/closet/urls.py
+# Este é o conteúdo CORRETO para findress_site/closet/urls.py
+
+from django.urls import path
+from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    
-    # Esta é a linha correta, aponta para o app 'closet'
-    path('closet/', include('closet.urls')),
-    
-    # Esta linha cuida das páginas de login/logout
-    path('accounts/', include('django.contrib.auth.urls')),
+    path('todas/', views.listar_pecas, name='listar_pecas'),
+    path('buscar/', views.pagina_busca, name='pagina_busca'),
+    path('resultados/', views.resultado_busca, name='resultado_busca'),
 ]
