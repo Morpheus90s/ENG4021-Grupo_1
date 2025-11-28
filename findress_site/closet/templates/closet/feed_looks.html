@@ -1,0 +1,159 @@
+{% extends 'closet/base.html' %}
+{% load static %}
+
+{% block title %}Explorar Looks | Findress{% endblock %}
+
+{% block extra_head %}
+<style>
+    /* Contentor centralizado estilo feed */
+    .feed-container {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    /* O cartão de cada post */
+    .look-card {
+        background: white;
+        border: 1px solid var(--grey-border);
+        border-radius: 12px;
+        margin-bottom: 2rem;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    /* Cabeçalho com avatar e nome */
+    .look-header {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #eee;
+    }
+
+    .user-avatar {
+        width: 32px;
+        height: 32px;
+        background-color: var(--lilac-primary);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-right: 10px;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+    }
+
+    .username {
+        font-weight: 600;
+        color: var(--lilac-dark);
+    }
+
+    /* A foto do look */
+    .look-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        max-height: 500px;
+        object-fit: cover;
+    }
+
+    /* Placeholder caso não tenha foto */
+    .no-photo-placeholder {
+        width: 100%;
+        height: 250px;
+        background: #f8f9fa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #aaa;
+        flex-direction: column;
+    }
+
+    .look-content {
+        padding: 1rem;
+    }
+
+    .look-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+    }
+
+    .look-desc {
+        color: var(--text-color);
+        margin-bottom: 1rem;
+        font-size: 0.95rem;
+    }
+
+    /* Tags das peças usadas */
+    .pecas-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #eee;
+    }
+
+    .tag {
+        background: var(--lilac-light);
+        color: var(--lilac-dark);
+        padding: 4px 10px;
+        border-radius: 15px;
+        font-size: 0.8rem;
+        text-decoration: none;
+    }
+    
+    .look-footer {
+        padding: 0.5rem 1rem;
+        color: #888;
+        font-size: 0.8rem;
+        text-align: right;
+        background: #fafafa;
+        border-top: 1px solid #eee;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="page-header" style="text-align: center; margin-bottom: 2rem;">
+    <h2>🌍 Explorar Looks</h2>
+    <p>Inspira-te com o estilo da comunidade</p>
+</div>
+
+<div class="feed-container">
+    {% for look in looks %}
+        <article class="look-card">
+            <!-- Cabeçalho: Quem postou -->
+            <div class="look-header">
+                <div class="user-avatar">
+                    <!-- Pega a primeira letra do nome do usuário -->
+                    {{ look.usuario.username|slice:":1" }} 
+                </div>
+                <span class="username">@{{ look.usuario.username }}</span>
+            </div>
+
+            <!-- Imagem -->
+            {% if look.foto_principal %}
+                <img src="{{ look.foto_principal.url }}" alt="{{ look.nome_look }}" class="look-image">
+            {% else %}
+                <div class="no-photo-placeholder">
+                    <span style="font-size: 2rem;">👗</span>
+                    <p>Look sem foto</p>
+                </div>
+            {% endif %}
+
+            <!-- Conteúdo: Título, Descrição e Peças -->
+            <div class="look-content">
+                <div class="look-title">{{ look.nome_look }}</div>
+                
+                {% if look.descricao %}
+                    <p class="look-desc">{{ look.descricao }}</p>
+                {% endif %}
+
+                <!-- Lista das Peças que compõem o look -->
+                {% if look.pecas.all %}
+                    <div class="pecas-tags">
+                        <small style="width: 100%; color:

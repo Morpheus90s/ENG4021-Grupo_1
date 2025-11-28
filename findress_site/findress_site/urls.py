@@ -1,18 +1,22 @@
 from django.contrib import admin
-from django.urls import path, include # Certifique-se de que 'include' está importado
+from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     
-    # Esta é a linha principal. 
-    # Ela envia todo o tráfego que NÃO for /admin/
-    # para o arquivo 'closet.urls' decidir o que fazer.
+    # 👇 ESTA É A LINHA QUE FALTA! 
+    # Ela habilita o sistema de login padrão (que usa a pasta registration/login.html)
+    path('accounts/', include('django.contrib.auth.urls')),
+    
+    # As URLs do seu app Closet
+    path('closet/', include('closet.urls')),
+    
+    # Opcional: Redireciona a página inicial (raiz) direto para o closet
     path('', include('closet.urls')), 
 ]
 
-# Esta linha é um bônus para o Django mostrar as imagens 
-# que você faz upload no /admin
+# Configuração para servir as fotos (media)
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
