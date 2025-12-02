@@ -25,13 +25,13 @@
 
             <button type="submit" class="btn-primary" style="width: 100%;">Entrar</button>
             
-            <!-- Campo oculto 'next' para redirecionar o usuário de volta para onde ele estava antes de logar -->
+            
             <input type="hidden" name="next" value="{{ next }}">
         </form>
     </div>
     
-    <p style="text-align: center; margin-top: 1.5rem; font-size: 0.9rem;">
-        Ainda não tem conta? <a href="#" style="color: var(--lilac-primary);">Cadastre-se</a>
+    <p class="login-footer">
+        Ainda não tem conta? <a href="{% url 'cadastro' %}">Cadastre-se</a>
     </p>
 </div>
 {% endblock %}

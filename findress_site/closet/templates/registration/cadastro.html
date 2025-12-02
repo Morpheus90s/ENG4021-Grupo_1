@@ -1,0 +1,47 @@
+{% extends 'closet/base.html' %}
+{% load static %}
+
+{% block title %}Cadastrar - Findress{% endblock %}
+
+{# CSS Específico de Cadastro #}
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="register-wrapper">
+    <h2 class="register-title">Crie sua conta</h2>
+    
+    <div class="form-container">
+        <form method="post">
+            {% csrf_token %}
+            
+            {# Renderiza o formulário do Django campo por campo #}
+            {% for field in form %}
+                <div class="form-group">
+                    <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    {{ field }}
+                    
+                    {% if field.help_text %}
+                        <small class="helptext">{{ field.help_text }}</small>
+                    {% endif %}
+                    
+                    {% for error in field.errors %}
+                        <p style="color: red; font-size: 0.8rem;">{{ error }}</p>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+
+            <button type="submit" class="btn-primary btn-full-width" style="width: 100%; margin-top: 1rem;">
+                Cadastrar
+            </button>
+        </form>
+    </div>
+    
+    <p class="register-footer">
+        Já tem uma conta? <a href="{% url 'login' %}">Entrar</a>
+    </p>
+</div>
+
+{% endblock %}

@@ -1,0 +1,77 @@
+
+.register-wrapper {
+    max-width: 500px; 
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.register-title {
+    text-align: center;
+    color: var(--lilac-dark);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Estiliza os inputs gerados pelo Django */
+.form-container input[type="text"],
+.form-container input[type="password"],
+.form-container input[type="email"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--grey-border);
+    border-radius: 25px;
+    margin-bottom: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.form-container input:focus {
+    outline: none;
+    border-color: var(--lilac-primary);
+    box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.1);
+}
+
+/* Estiliza os labels */
+.form-container label {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--lilac-primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Textos de ajuda (ex: requisitos de senha) */
+.helptext {
+    display: block;
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+}
+
+.ul-errorlist {
+    color: red;
+    font-size: 0.9rem;
+    list-style: none;
+    padding: 0;
+}
+
+.register-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.register-footer a {
+    color: var(--lilac-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-footer a:hover {
+    text-decoration: underline;
+}

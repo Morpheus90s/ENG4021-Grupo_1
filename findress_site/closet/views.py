@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from .models import PecaRoupa
-# Importações necessárias para o login manual
+# Importações necessárias para o login manual e cadastro
 from django.contrib.auth import login
 from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm # <--- IMPORTANTE: Adicionado
 
 # --- 1. PÁGINA INICIAL (Home) ---
 def home(request):
@@ -64,9 +65,21 @@ def entrar(request):
             # Força o login desse usuário
             login(request, usuario_magico)
             
-            # Renderiza a mesma página, mas agora o base.html vai detectar 
-            # que o usuário está logado e mudar o menu.
-            return render(request, 'registration/login.html')
+            # Redireciona para a home para atualizar o menu
+            return redirect('home')
             
     # Se for GET (apenas abriu a página), mostra o formulário
     return render(request, 'registration/login.html')
+
+# --- 8. CADASTRO (NOVA FUNÇÃO) ---
+def cadastrar(request):
+    """Exibe o formulário de cadastro e cria o usuário."""
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('home')
+    else:
+        form = UserCreationForm()
+    return render(request, 'registration/cadastro.html', {'form': form})

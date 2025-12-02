@@ -20,6 +20,7 @@ urlpatterns = [
     # 5. Meu Perfil
     path('perfil/', views.perfil, name='perfil'),
 
-    # 6. Rota de Login (Bypass) - ESTA É A QUE FALTAVA
-    path('entrar/', views.entrar, name='entrar'),
+    # 6. CADASTRO
+    path('cadastro/', views.cadastrar, name='cadastro'),
+    
 ]
