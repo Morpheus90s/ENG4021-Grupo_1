@@ -10,6 +10,13 @@ urlpatterns = [
     # Ela envia todo o tráfego que NÃO for /admin/
     # para o arquivo 'closet.urls' decidir o que fazer.
     path('', include('closet.urls')), 
+
+    # --- ADICIONADO CONFORME O GUIA ---
+    # Isso cria automaticamente as rotas de autenticação:
+    # accounts/login/ [name='login']
+    # accounts/logout/ [name='logout']
+    # accounts/password_change/ ... e outras
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
 
 # Esta linha é um bônus para o Django mostrar as imagens 

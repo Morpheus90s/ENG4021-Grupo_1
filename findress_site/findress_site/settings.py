@@ -111,9 +111,10 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+# ... (Mantenha todo o código anterior até chegar na parte 8)
 
 # -----------------------------------------------------------------
-# 8. CONFIGURAÇÕES DE LOGIN/LOGOUT E SEGURANÇA (ATIVIDADE 4)
+# 8. CONFIGURAÇÕES DE LOGIN/LOGOUT E SEGURANÇA (CORRIGIDO)
 # -----------------------------------------------------------------
 
 # Login/Logout
@@ -124,14 +125,31 @@ LOGOUT_REDIRECT_URL = '/accounts/login/'
 # E-mail no console
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-# CSRF (Correção do erro 403)
+# --- CORREÇÃO DO CSRF (403 Forbidden) ---
+
+# Confia em qualquer subdomínio do GitHub Codespaces e Localhost (HTTP e HTTPS)
 CSRF_TRUSTED_ORIGINS = [
-    'https://studious-chainsaw-6xwv5vq9qw93r757-8000.app.github.dev',
-    'https://studious-chainsaw-6xwv5vq9qw93r757-8001.app.github.dev',
-    'https://localhost:8000',
-    'http://localhost:8000',
-    'https://localhost:8001',
-    'http://localhost:8001',
-    'http://127.0.0.1:8001',
     'https://*.app.github.dev',
+    'https://*.github.dev',
+    'http://localhost:8000',
+    'http://localhost:8001',
+    'http://127.0.0.1:8000',
+    'http://127.0.0.1:8001',
+    # Adicionando versões HTTPS para localhost (Resolve o seu erro específico)
+    'https://localhost:8000',
+    'https://localhost:8001',
+    'https://127.0.0.1:8000',
+    'https://127.0.0.1:8001',
 ]
+
+# Essas configurações ajudam quando o site roda atrás de um proxy (como o Codespace)
+# (Corrigido erro de digitação de SSE para USE)
+USE_X_FORWARDED_HOST = True
+USE_X_FORWARDED_PORT = True
+
+# Esta linha é CRUCIAL para o Django saber que o Codespaces é seguro (estava comentada/quebrada antes)
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Opcional: Se continuar dando erro, descomente a linha abaixo TEMPORARIAMENTE para testar
+# CSRF_COOKIE_SECURE = True
+# SESSION_COOKIE_SECURE = True

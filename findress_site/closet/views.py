@@ -1,21 +1,30 @@
 from django.shortcuts import render, redirect
 from .models import PecaRoupa
-# Importações necessárias para o login manual e cadastro
+# Importações necessárias para o login e cadastro
 from django.contrib.auth import login
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm # <--- IMPORTANTE: Adicionado
+from django.contrib.auth.forms import UserCreationForm
+# IMPORTANTE: Importamos o decorador para proteger a página
+from django.contrib.auth.decorators import login_required
 
 # --- 1. PÁGINA INICIAL (Home) ---
 def home(request):
     """Renderiza a página inicial com o banner e cards."""
     return render(request, 'closet/home.html')
 
-# --- 2. LISTA COMPLETA (Página de Consulta) ---
+# --- 2. LISTA "MEU CLOSET" (Agora Filtrada) ---
+@login_required # Só quem está logado pode acessar
 def listar_pecas(request):
-    """Mostra todas as peças cadastradas."""
-    todas_as_pecas = PecaRoupa.objects.all()
+    """
+    Mostra APENAS as peças cadastradas pelo usuário logado.
+    """
+    # request.user contém o usuário atual que está logado.
+    # Filtramos a tabela PecaRoupa para pegar apenas onde o campo 'usuario' é igual ao logado.
+    # OBS: Certifique-se de que o modelo PecaRoupa tem o campo 'usuario'.
+    minhas_pecas = PecaRoupa.objects.filter(usuario=request.user)
+    
     contexto = {
-        'pecas': todas_as_pecas,
+        'pecas': minhas_pecas,
         'busca': None, 
     }
     return render(request, 'closet/lista_pecas.html', contexto)
@@ -31,6 +40,8 @@ def resultado_busca(request):
     busca_digitada = request.GET.get('busca', '')
 
     if busca_digitada:
+        # Opcional: Se quiser que a busca também seja restrita ao usuário, use:
+        # pecas_filtradas = PecaRoupa.objects.filter(usuario=request.user, nome_peca__icontains=busca_digitada)
         pecas_filtradas = PecaRoupa.objects.filter(nome_peca__icontains=busca_digitada)
     else:
         pecas_filtradas = PecaRoupa.objects.none()
@@ -47,31 +58,25 @@ def sobre(request):
     return render(request, 'closet/sobre.html')
 
 # --- 6. MEU PERFIL ---
+@login_required
 def perfil(request):
     """Renderiza a página de perfil do usuário."""
     return render(request, 'closet/perfil.html')
 
-# --- 7. LOGIN MÁGICO (BYPASS) ---
+# --- 7. LOGIN MÁGICO (Mantido conforme seu código) ---
 def entrar(request):
     """
-    Simula um login. Se for POST (clicou no botão),
-    loga o primeiro usuário do banco automaticamente.
+    Simula um login. Se for POST, loga o primeiro usuário do banco.
     """
     if request.method == 'POST':
-        # Pega o primeiro usuário que encontrar (geralmente o admin)
         usuario_magico = User.objects.first()
-        
         if usuario_magico:
-            # Força o login desse usuário
             login(request, usuario_magico)
-            
-            # Redireciona para a home para atualizar o menu
             return redirect('home')
             
-    # Se for GET (apenas abriu a página), mostra o formulário
     return render(request, 'registration/login.html')
 
-# --- 8. CADASTRO (NOVA FUNÇÃO) ---
+# --- 8. CADASTRO ---
 def cadastrar(request):
     """Exibe o formulário de cadastro e cria o usuário."""
     if request.method == 'POST':

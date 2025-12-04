@@ -7,14 +7,22 @@
     <h2 style="text-align: center; color: var(--lilac-dark); margin-bottom: 2rem;">Bem-vindo de volta!</h2>
     
     <div class="form-container">
-        <!-- O action vazio envia para a mesma URL (a view de Login do Django) -->
-        <form method="post">
+        
+        <!-- Adicionei este bloco para avisar se a senha estiver errada -->
+        {% if form.errors %}
+            <div style="background-color: #ffebee; color: #c62828; padding: 10px; border-radius: 4px; margin-bottom: 15px; text-align: center;">
+                <p style="margin: 0;">Usuário ou senha incorretos.</p>
+            </div>
+        {% endif %}
+
+        <!-- O action aponta explicitamente para a rota de login -->
+        <form method="post" action="{% url 'login' %}">
             {% csrf_token %}
             
             <div style="margin-bottom: 1rem;">
                 <label for="id_username" style="display: block; margin-bottom: 0.5rem; color: var(--lilac-primary); font-weight: 600;">Usuário</label>
                 <!-- O name="username" é obrigatório para o Django -->
-                <input type="text" name="username" id="id_username" class="form-input" required>
+                <input type="text" name="username" id="id_username" class="form-input" required autofocus>
             </div>
 
             <div style="margin-bottom: 1.5rem;">
@@ -23,15 +31,18 @@
                 <input type="password" name="password" id="id_password" class="form-input" required>
             </div>
 
-            <button type="submit" class="btn-primary" style="width: 100%;">Entrar</button>
-            
+            <button type="submit" class="btn-primary" style="width: 100%; cursor: pointer;">Entrar</button>
             
             <input type="hidden" name="next" value="{{ next }}">
         </form>
     </div>
     
-    <p class="login-footer">
-        Ainda não tem conta? <a href="{% url 'cadastro' %}">Cadastre-se</a>
+    <p class="login-footer" style="text-align: center; margin-top: 1.5rem;">
+        Ainda não tem conta? <a href="{% url 'cadastro' %}" style="color: var(--lilac-dark); font-weight: bold;">Cadastre-se</a>
+    </p>
+
+    <p style="text-align: center; font-size: 0.9em;">
+        <a href="{% url 'password_reset' %}" style="color: #666;">Esqueci minha senha</a>
     </p>
 </div>
 {% endblock %}

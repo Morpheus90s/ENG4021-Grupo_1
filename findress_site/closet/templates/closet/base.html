@@ -3,66 +3,66 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Findress{% endblock %}</title>
-    
-    <!-- 1. CARREGA O CSS GLOBAL -->
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    
-    <!-- 2. ESPAÇO RESERVADO PARA CSS ESPECÍFICO -->
-    {% block extra_css %}
-    {% endblock %}
-</head>
-<body>
-
-    <header class="main-header">
-        <!-- Logo aponta para a Home -->
-        <a href="{% url 'home' %}" class="logo">Findress</a>
-        
-        <nav class="main-nav">
-            <!-- Links Públicos (Todo mundo vê) -->
-            <a href="{% url 'lista_pecas' %}">Meu Closet</a>
-            <a href="{% url 'pagina_busca' %}">Buscar Peças</a>
-            <a href="{% url 'sobre' %}">Sobre a Marca</a>
-            
-            <!-- LÓGICA DE USUÁRIO -->
-            {% if user.is_authenticated %}
-                <!-- Se ESTIVER logado, mostra Perfil e Sair -->
-                <a href="{% url 'perfil' %}" class="nav-link-highlight">Meu Perfil</a>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>{% block title %}Findress{% endblock %}</title>
                 
-                <!-- Formulário de Logout (Segurança do Django exige POST) -->
-                <form action="{% url 'logout' %}" method="post" style="display:inline;">
-                    {% csrf_token %}
-                    <button type="submit" class="nav-btn-logout">Sair</button>
-                </form>
-
-            {% else %}
-                <!-- Se NÃO estiver logado, mostra apenas Entrar -->
-                <div class="auth-buttons">
-                    
-                    <!-- CORREÇÃO AQUI: Agora aponta para a rota 'entrar' que criamos -->
-                    <a href="{% url 'entrar' %}" class="nav-btn-login">Entrar</a>
-                    
-                </div>
-            {% endif %}
-        </nav>
-    </header>
-
-    <main class="main-content">
-        <!-- O conteúdo das outras páginas será inserido aqui -->
-        {% block content %}
-        {% endblock %}
-    </main>
-
-    <!-- Rodapé Global -->
-    <footer>
-        <p>&copy; 2025 Findress - Seu estilo, suas regras.</p>
-        
-        <!-- Link de Admin movido para cá (Discreto) -->
-        <div class="footer-admin">
-            <a href="/admin/" target="_blank">Área Administrativa</a>
-        </div>
-    </footer>
-    
-</body>
-</html>
+                    <!-- 1. CARREGA O CSS GLOBAL -->
+                        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+                            
+                                <!-- 2. ESPAÇO RESERVADO PARA CSS ESPECÍFICO -->
+                                    {% block extra_css %}
+                                        {% endblock %}
+                                        </head>
+                                        <body>
+                                        
+                                            <header class="main-header">
+                                                    <!-- Logo aponta para a Home -->
+                                                            <a href="{% url 'home' %}" class="logo">Findress</a>
+                                                                    
+                                                                            <nav class="main-nav">
+                                                                                        <!-- Links Públicos (Todo mundo vê) -->
+                                                                                                    <a href="{% url 'lista_pecas' %}">Meu Closet</a>
+                                                                                                                <a href="{% url 'pagina_busca' %}">Buscar Peças</a>
+                                                                                                                            <a href="{% url 'sobre' %}">Sobre a Marca</a>
+                                                                                                                                        
+                                                                                                                                                    <!-- LÓGICA DE USUÁRIO -->
+                                                                                                                                                                {% if user.is_authenticated %}
+                                                                                                                                                                                <!-- Se ESTIVER logado, mostra Perfil e Sair -->
+                                                                                                                                                                                                <a href="{% url 'perfil' %}" class="nav-link-highlight">Meu Perfil</a>
+                                                                                                                                                                                                                
+                                                                                                                                                                                                                                <!-- Formulário de Logout (Segurança do Django exige POST) -->
+                                                                                                                                                                                                                                                <form action="{% url 'logout' %}" method="post" style="display:inline;">
+                                                                                                                                                                                                                                                                    {% csrf_token %}
+                                                                                                                                                                                                                                                                                        <button type="submit" class="nav-btn-logout">Sair</button>
+                                                                                                                                                                                                                                                                                                        </form>
+                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                    {% else %}
+                                                                                                                                                                                                                                                                                                                                    <!-- Se NÃO estiver logado, mostra apenas Entrar -->
+                                                                                                                                                                                                                                                                                                                                                    <div class="auth-buttons">
+                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                            <!-- CORREÇÃO AQUI: Agora aponta para a rota 'entrar' que criamos -->
+                                                                                                                                                                                                                                                                                                                                                                                                                <a href="{% url 'entrar' %}" class="nav-btn-login">Entrar</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                {% endif %}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </nav>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </header>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <main class="main-content">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <!-- O conteúdo das outras páginas será inserido aqui -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                {% block content %}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        {% endblock %}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </main>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <!-- Rodapé Global -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <footer>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <p>&copy; 2025 Findress - Seu estilo, suas regras.</p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <!-- Link de Admin movido para cá (Discreto) -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <div class="footer-admin">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <a href="/admin/" target="_blank">Área Administrativa</a>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </footer>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </body>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </html>}
