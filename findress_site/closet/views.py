@@ -57,13 +57,18 @@ def sobre(request):
     """Renderiza a página de texto 'Sobre'."""
     return render(request, 'closet/sobre.html')
 
-# --- 6. MEU PERFIL ---
+# --- 6. PÁGINA DE AJUDA ---
+def pagina_ajuda(request):
+    """Renderiza a página de ajuda/FAQ."""
+    return render(request, 'closet/ajuda.html')
+
+# --- 7. MEU PERFIL ---
 @login_required
 def perfil(request):
     """Renderiza a página de perfil do usuário."""
     return render(request, 'closet/perfil.html')
 
-# --- 7. LOGIN MÁGICO (Mantido conforme seu código) ---
+# --- 8. LOGIN MÁGICO (Mantido conforme seu código) ---
 def entrar(request):
     """
     Simula um login. Se for POST, loga o primeiro usuário do banco.
@@ -76,7 +81,7 @@ def entrar(request):
             
     return render(request, 'registration/login.html')
 
-# --- 8. CADASTRO ---
+# --- 9. CADASTRO ---
 def cadastrar(request):
     """Exibe o formulário de cadastro e cria o usuário."""
     if request.method == 'POST':

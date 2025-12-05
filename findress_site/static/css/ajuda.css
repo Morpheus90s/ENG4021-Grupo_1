@@ -1,0 +1,510 @@
+/* ajuda.css - Estilos para a página de ajuda da Findress */
+
+/* --- VARIAVEIS ESPECÍFICAS DA AJUDA --- */
+:root {
+    --ajuda-lilac: #8a2be2;
+    --ajuda-lilac-light: #f5f0ff;
+    --ajuda-border: #e9e0ff;
+    --ajuda-text: #4a4a4a;
+    --ajuda-shadow: 0 4px 12px rgba(138, 43, 226, 0.08);
+}
+
+/* --- SEÇÃO PRINCIPAL --- */
+.help-section {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: white;
+    border-radius: 16px;
+    box-shadow: var(--ajuda-shadow);
+    border: 1px solid var(--ajuda-border);
+}
+
+/* --- CABEÇALHO DA AJUDA --- */
+.help-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--ajuda-lilac);
+    background: linear-gradient(to right, transparent, var(--ajuda-lilac-light), transparent);
+    border-radius: 10px;
+    padding: 2rem;
+}
+
+.help-title {
+    color: var(--ajuda-lilac);
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(45deg, var(--ajuda-lilac), #6a0dad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.help-subtitle {
+    color: #666;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+    line-height: 1.6;
+}
+
+/* --- BARRA DE PESQUISA --- */
+.search-box {
+    margin: 2.5rem auto 1rem;
+    position: relative;
+    max-width: 600px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    background: var(--white);
+    color: var(--ajuda-text);
+}
+
+.search-input::placeholder {
+    color: #999;
+    font-weight: 400;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--ajuda-lilac);
+    box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.15);
+    background: var(--white);
+}
+
+.search-icon {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 1.2rem;
+    pointer-events: none;
+}
+
+/* --- CATEGORIAS --- */
+.help-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3.5rem 0;
+}
+
+.category-card {
+    background: var(--ajuda-lilac-light);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: 1px solid rgba(138, 43, 226, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.category-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--ajuda-lilac), #d4c1ed);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(138, 43, 226, 0.15);
+    border-color: var(--ajuda-lilac);
+}
+
+.category-card:hover::before {
+    opacity: 1;
+}
+
+.category-icon {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.category-card:hover .category-icon {
+    transform: scale(1.1);
+}
+
+.category-title {
+    color: var(--ajuda-lilac);
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.category-desc {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* --- FAQ --- */
+.faq-section {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--ajuda-border);
+}
+
+.faq-title {
+    color: var(--ajuda-lilac);
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.faq-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, var(--ajuda-lilac), #d4c1ed);
+    border-radius: 2px;
+}
+
+.faq-category-title {
+    color: var(--ajuda-lilac);
+    font-size: 1.4rem;
+    margin: 3rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px dashed var(--ajuda-border);
+    font-weight: 600;
+}
+
+.faq-category:first-child .faq-category-title {
+    margin-top: 0;
+}
+
+.faq-item {
+    margin-bottom: 1.2rem;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: border-color 0.3s;
+}
+
+.faq-item:hover {
+    border-color: var(--ajuda-lilac-light);
+}
+
+.faq-question {
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f5 100%);
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+    font-size: 1.05rem;
+    position: relative;
+}
+
+.faq-question:hover {
+    background: linear-gradient(135deg, #f1f3f5 0%, #e9ecef 100%);
+    padding-left: 2rem;
+}
+
+.faq-answer {
+    padding: 0;
+    background: white;
+    color: #555;
+    line-height: 1.7;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-answer.active {
+    padding: 1.5rem;
+    max-height: 500px;
+}
+
+.faq-toggle {
+    color: var(--ajuda-lilac);
+    font-weight: bold;
+    font-size: 1.5rem;
+    min-width: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.faq-question:hover .faq-toggle {
+    transform: scale(1.2);
+}
+
+.faq-list {
+    margin-left: 1.5rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.faq-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+/* --- SUPORTE --- */
+.contact-support {
+    text-align: center;
+    margin-top: 5rem;
+    padding: 3rem;
+    background: linear-gradient(135deg, var(--ajuda-lilac-light) 0%, #f0ebff 100%);
+    border-radius: 16px;
+    border: 1px solid var(--ajuda-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-support::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--ajuda-lilac), #d4c1ed);
+}
+
+.support-title {
+    color: var(--ajuda-lilac);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.contact-support > p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.support-options {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.support-option {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s;
+    min-width: 250px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.support-option:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 20px rgba(138, 43, 226, 0.15);
+    border-color: var(--ajuda-lilac);
+    color: var(--ajuda-lilac);
+}
+
+.support-icon {
+    font-size: 2rem;
+    color: var(--ajuda-lilac);
+    background: var(--ajuda-lilac-light);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.support-option:hover .support-icon {
+    background: var(--ajuda-lilac);
+    color: white;
+    transform: scale(1.1);
+}
+
+.support-option strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.support-option p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+.support-option:hover p {
+    color: #555;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 992px) {
+    .help-section {
+        padding: 2rem;
+        margin: 1.5rem;
+    }
+    
+    .help-title {
+        font-size: 2.2rem;
+    }
+    
+    .help-categories {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .support-option {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .help-section {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .help-title {
+        font-size: 1.8rem;
+    }
+    
+    .help-subtitle {
+        font-size: 1rem;
+    }
+    
+    .help-categories {
+        grid-template-columns: 1fr;
+    }
+    
+    .support-options {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .support-option {
+        width: 100%;
+        max-width: 300px;
+        justify-content: flex-start;
+    }
+    
+    .search-input {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .search-icon {
+        right: 1.5rem;
+    }
+    
+    .faq-question {
+        padding: 1.2rem;
+        font-size: 1rem;
+    }
+    
+    .faq-question:hover {
+        padding-left: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .help-header {
+        padding: 1.5rem 1rem;
+    }
+    
+    .help-title {
+        font-size: 1.6rem;
+    }
+    
+    .faq-title {
+        font-size: 1.5rem;
+    }
+    
+    .contact-support {
+        padding: 2rem 1rem;
+    }
+    
+    .support-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* --- ANIMAÇÕES --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.help-section > * {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0;
+}
+
+.help-header { animation-delay: 0.1s; }
+.help-categories { animation-delay: 0.2s; }
+.faq-section { animation-delay: 0.3s; }
+.contact-support { animation-delay: 0.4s; }
+
+/* --- ESTADOS DE BUSCA --- */
+.faq-item.search-highlight {
+    border-color: var(--ajuda-lilac);
+    box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.2);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.2); }
+    50% { box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.3); }
+}
+
+/* --- ESTILOS PARA ÍCONES DE EMOJI --- */
+.category-icon {
+    font-size: 2.8rem;
+    line-height: 1;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.support-icon {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}

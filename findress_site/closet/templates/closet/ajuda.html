@@ -1,0 +1,321 @@
+{% extends 'closet/base.html' %}
+{% load static %}
+
+{% block title %}Ajuda - Findress{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/ajuda.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="help-section">
+    <div class="help-header">
+        <h1 class="help-title">Central de Ajuda</h1>
+        <p class="help-subtitle">Encontre respostas rápidas para suas dúvidas ou entre em contato com nossa equipe</p>
+        
+        <div class="search-box">
+            <input type="text" class="search-input" placeholder="Digite sua dúvida...">
+            <span class="search-icon">🔍</span>
+        </div>
+    </div>
+
+    <div class="help-categories">
+        <div class="category-card" onclick="scrollToSection('cadastro')">
+            <div class="category-icon">👤</div>
+            <h3 class="category-title">Cadastro e Conta</h3>
+            <p class="category-desc">Dúvidas sobre criar conta, login e configurações do perfil</p>
+        </div>
+        
+        <div class="category-card" onclick="scrollToSection('closet')">
+            <div class="category-icon">👗</div>
+            <h3 class="category-title">Meu Closet</h3>
+            <p class="category-desc">Como adicionar, editar e organizar suas peças de roupa</p>
+        </div>
+        
+        <div class="category-card" onclick="scrollToSection('combinações')">
+            <div class="category-icon">🎨</div>
+            <h3 class="category-title">Combinações</h3>
+            <p class="category-desc">Sobre como criar e salvar looks com suas peças</p>
+        </div>
+        
+        <div class="category-card" onclick="scrollToSection('app')">
+            <div class="category-icon">📱</div>
+            <h3 class="category-title">App e Dispositivos</h3>
+            <p class="category-desc">Funcionalidades móveis e compatibilidade</p>
+        </div>
+    </div>
+
+    <div class="faq-section">
+        <h2 class="faq-title">Perguntas Frequentes</h2>
+        
+        <div id="cadastro">
+            <h3 style="color: var(--lilac-primary); margin-bottom: 1rem;">Cadastro e Conta</h3>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Como criar uma conta na Findress?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Para criar sua conta, clique em "Meu Perfil" no menu superior e selecione "Cadastrar". Você pode usar seu email, Google ou Facebook. O cadastro é gratuito e leva menos de 2 minutos.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Esqueci minha senha, o que fazer?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Na tela de login, clique em "Esqueci minha senha". Digite o email cadastrado e você receberá um link para redefinir sua senha. Verifique também sua pasta de spam.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Posso alterar minhas informações pessoais?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Sim! Acesse "Meu Perfil" → "Configurações" → "Editar Perfil". Lá você pode atualizar nome, email, foto e preferências de estilo.
+                </div>
+            </div>
+        </div>
+        
+        <div id="closet" style="margin-top: 3rem;">
+            <h3 style="color: var(--lilac-primary); margin-bottom: 1rem;">Meu Closet</h3>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Como adicionar peças ao meu closet?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <ol style="margin-left: 20px; color: #555;">
+                        <li>Acesse "Meu Closet"</li>
+                        <li>Clique no botão "+" ou "Adicionar Peça"</li>
+                        <li>Preencha os dados: nome, categoria, cor, tamanho</li>
+                        <li>Faça upload de uma foto da peça</li>
+                        <li>Clique em "Salvar"</li>
+                    </ol>
+                    Dica: Tire fotos com fundo neutro para melhor reconhecimento.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Posso editar ou excluir peças já cadastradas?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Sim! No "Meu Closet", clique sobre qualquer peça para ver suas opções. Você pode editar todas as informações ou excluir a peça permanentemente. Exclusões podem ser desfeitas dentro de 7 dias na lixeira virtual.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Como organizar minhas peças por categorias?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Ao adicionar uma peça, escolha uma categoria (ex: Blusas, Calças, Vestidos). Você também pode criar categorias personalizadas em "Configurações do Closet". Use os filtros na barra lateral para visualizar por categoria, cor ou ocasião.
+                </div>
+            </div>
+        </div>
+        
+        <div id="combinações" style="margin-top: 3rem;">
+            <h3 style="color: var(--lilac-primary); margin-bottom: 1rem;">Combinações e Looks</h3>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Como criar combinações de looks?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <ol style="margin-left: 20px; color: #555;">
+                        <li>Acesse "Meu Closet"</li>
+                        <li>Selecione as peças que deseja combinar (mínimo 2)</li>
+                        <li>Clique em "Criar Look"</li>
+                        <li>Arraste e organize as peças na tela de montagem</li>
+                        <li>Nomeie seu look e salve para acessar depois</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    A Findress sugere combinações automaticamente?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Sim! Com base nas peças do seu closet e suas preferências de estilo, nosso algoritmo sugere combinações inéditas. Acesse "Inspiração" no menu para ver sugestões personalizadas. Quanto mais peças cadastradas, melhores as sugestões.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Posso planejar looks para eventos específicos?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Sim! Use a funcionalidade "Planejamento de Eventos". Adicione o evento (trabalho, festa, viagem), defina o estilo desejado e receba sugestões baseadas no clima, ocasião e suas peças disponíveis. Você também pode criar coleções temáticas.
+                </div>
+            </div>
+        </div>
+        
+        <div id="app" style="margin-top: 3rem;">
+            <h3 style="color: var(--lilac-primary); margin-bottom: 1rem;">App e Dispositivos</h3>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Existe aplicativo para celular?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Sim! O app Findress está disponível para iOS e Android. Baixe na App Store ou Google Play. Todas suas informações são sincronizadas automaticamente entre web e app.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Posso usar a Findress offline?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    No app, você pode visualizar seu closet já carregado mesmo sem internet. Para adicionar novas peças ou usar sugestões em tempo real, é necessária conexão. No site web, é necessário estar online.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    Meu closet é sincronizado entre dispositivos?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Sim! Todas suas peças, looks e preferências são sincronizadas em tempo real. Você pode começar um look no celular e terminar no computador. Basta fazer login com a mesma conta.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-support">
+        <h2 class="support-title">Ainda com dúvidas?</h2>
+        <p>Nossa equipe está pronta para ajudar você!</p>
+        
+        <div class="support-options">
+            <a href="mailto:suporte@findress.com" class="support-option">
+                <span class="support-icon">✉️</span>
+                <div>
+                    <strong>Email</strong>
+                    <p style="margin: 0; font-size: 0.9rem;">suporte@findress.com</p>
+                </div>
+            </a>
+            
+            <a href="#" class="support-option" onclick="alert('Chat em breve disponível!')">
+                <span class="support-icon">💬</span>
+                <div>
+                    <strong>Chat Online</strong>
+                    <p style="margin: 0; font-size: 0.9rem;">Seg-Sex, 9h-18h</p>
+                </div>
+            </a>
+            
+            <a href="#" class="support-option" onclick="alert('Guia do usuário em PDF disponível para download')">
+                <span class="support-icon">📖</span>
+                <div>
+                    <strong>Guia do Usuário</strong>
+                    <p style="margin: 0; font-size: 0.9rem;">Manual completo</p>
+                </div>
+            </a>
+        </div>
+        
+        <p style="margin-top: 2rem; color: #666; font-size: 0.9rem;">
+            Tempo médio de resposta: 24 horas úteis
+        </p>
+    </div>
+</div>
+
+<script>
+    // Função para alternar visibilidade das respostas
+    function toggleFAQ(element) {
+        const answer = element.nextElementSibling;
+        const toggle = element.querySelector('.faq-toggle');
+        
+        // Fecha outras respostas abertas no mesmo grupo
+        const parent = element.parentElement.parentElement;
+        const allAnswers = parent.querySelectorAll('.faq-answer');
+        const allToggles = parent.querySelectorAll('.faq-toggle');
+        
+        allAnswers.forEach(ans => {
+            if (ans !== answer && ans.classList.contains('active')) {
+                ans.classList.remove('active');
+            }
+        });
+        
+        allToggles.forEach(tog => {
+            if (tog !== toggle && tog.textContent === '−') {
+                tog.textContent = '+';
+            }
+        });
+        
+        // Alterna a resposta atual
+        answer.classList.toggle('active');
+        toggle.textContent = answer.classList.contains('active') ? '−' : '+';
+    }
+    
+    // Função para rolar até uma seção específica
+    function scrollToSection(sectionId) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+    
+    // Funcionalidade de busca simples
+    document.querySelector('.search-input').addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        
+        if (searchTerm.length < 2) return;
+        
+        const questions = document.querySelectorAll('.faq-question');
+        let foundAny = false;
+        
+        questions.forEach(question => {
+            const questionText = question.textContent.toLowerCase();
+            const answer = question.nextElementSibling;
+            
+            if (questionText.includes(searchTerm) || answer.textContent.toLowerCase().includes(searchTerm)) {
+                question.parentElement.style.display = 'block';
+                question.style.backgroundColor = '#fff9e6';
+                
+                // Abre a resposta se estiver fechada
+                if (!answer.classList.contains('active')) {
+                    answer.classList.add('active');
+                    question.querySelector('.faq-toggle').textContent = '−';
+                }
+                
+                foundAny = true;
+            } else {
+                question.parentElement.style.display = 'none';
+                question.style.backgroundColor = '';
+            }
+        });
+        
+        // Mostra mensagem se não encontrar nada
+        if (!foundAny && searchTerm.length >= 3) {
+            alert(`Não encontramos resultados para "${searchTerm}". Tente com outras palavras-chave ou entre em contato com nosso suporte.`);
+        }
+    });
+    
+    // Abre todas as FAQs ao carregar se houver parâmetro na URL
+    document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('showAll') === 'true') {
+            document.querySelectorAll('.faq-question').forEach(q => {
+                const answer = q.nextElementSibling;
+                const toggle = q.querySelector('.faq-toggle');
+                
+                answer.classList.add('active');
+                toggle.textContent = '−';
+            });
+        }
+    });
+</script>
+
+{% endblock %}
