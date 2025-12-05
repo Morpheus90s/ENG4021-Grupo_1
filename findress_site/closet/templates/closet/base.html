@@ -26,6 +26,8 @@
             <a href="{% url 'sobre' %}">Sobre a Marca</a>
             <!-- ADICIONE ESTA LINHA PARA A PÁGINA DE AJUDA -->
             <a href="{% url 'ajuda' %}">Ajuda</a>
+            <!-- ADICIONE ESTA LINHA PARA A PÁGINA DE CONTATO -->
+            <a href="{% url 'contato' %}">Contato</a>
             
             <!-- LÓGICA DE USUÁRIO -->
             {% if user.is_authenticated %}

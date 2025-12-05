@@ -35,4 +35,7 @@ urlpatterns = [
 
     # 9. LOGOUT
     path('sair/', auth_views.LogoutView.as_view(), name='logout'),
+    
+    # 10. PÁGINA DE CONTATO (NOVA ROTA)
+    path('contato/', views.pagina_contato, name='contato'),
 ]
